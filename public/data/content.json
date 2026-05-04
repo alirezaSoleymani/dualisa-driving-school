@@ -1,10 +1,21 @@
 {
-  "navbar": {},
+  "navbar": {
+    "items": ["Home", "Services", "About Us", "Contact Us"]
+  },
   "home": {},
   "about-us": {},
   "contact-us": {},
-  "services": {},
+  "services": {
+    "title": "Services"
+  },
   "service-details": {},
   "not-found": {},
-  "footer": {}
+  "footer": {
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us"
+    }
+  }
 }

@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@fontsource/afacad-flux";
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+:root {
+  --color-primary: #dc5e15;
+
+  --color-off-white: #f0f0f0;
+  --color-light-gray: #909090;
+  --color-gray: #5d5b5b;
+  --color-dark-gray: #333333;
+
+  //Alerts
+  --color-success: #008080;
+  --color-warning: #dca015;
+  --color-danger: #e74c3c;
+
+  //Typography
+  --font-primary: "Afacad Flux", sans-serif;
+
+  //
+  --navbar-height: 5.3rem;
+  --page-side-padding: 7rem;
+  --page-top-padding: 5rem;
+}

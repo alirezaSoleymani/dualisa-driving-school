@@ -1,0 +1,17 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-dark-gray);
+  padding: 2rem 7rem;
+
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+
+    a {
+      text-decoration: none;
+      color: var(--color-off-white);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,14 +11,9 @@ export class ContentService {
   constructor(private http: HttpClient) {}
 
   getContent(page: string): Observable<any> {
-    if (this.allContent) {
-      return new Observable((observer) => {
-        observer.next(this.allContent[page]);
-        observer.complete();
-      });
-    }
+    if (this.allContent) return of(this.allContent[page]);
 
-    return this.http.get('/public/data/content.json').pipe(
+    return this.http.get('/data/content.json').pipe(
       map((data: any) => {
         this.allContent = data;
         return data[page];

@@ -1,0 +1,13 @@
+.hero {
+  height: 20rem;
+  background-color: var(--color-dark-gray);
+  border-radius: 2.5rem;
+
+  .content {
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    // margin: 0;
+    text-align: center;
+  }
+}
