@@ -18,10 +18,27 @@
     </svg>
 
     <!-- Nav Items -->
-    @for (item of content().items; track $index) {
-    <a routerLink="">{{item}}</a>
+    @for (item of content().items; track $index) { @if (item !== "Services") {
+    <a>{{ item }} </a>
+    } @else {
+    <div class="services">
+      <a
+        ><div class="content">{{ item }}</div>
+        <img
+          src="/images/chevron-down.svg"
+          alt="chevron-down"
+          class="chevron-icon"
+        />
+      </a>
 
-    } }
+      <ul class="dropdown">
+        @for (service of content().dropdownItems; track $index) {
+        <li class="service">{{service}}</li>
+        }
+      </ul>
+    </div>
+
+    } }}
   </nav>
 
   <div class="social-media">

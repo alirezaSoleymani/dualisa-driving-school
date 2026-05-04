@@ -18,6 +18,7 @@
     // z-index: 100;
     aspect-ratio: 651 / 91;
     padding: 0.3rem 3rem;
+    overflow: visible; //for dropdown
 
     .bg-shape {
       position: absolute;
@@ -27,8 +28,72 @@
 
     a {
       position: relative;
+      display: flex;
+      gap: 0.1rem;
       text-decoration: none;
+      align-items: center;
       color: var(--color-light-gray);
+      height: 100%; // stretch to fill nav height
+      cursor: pointer;
+
+      .chevron-icon {
+        align-self: center;
+        width: fit-content;
+        height: fit-content;
+        transition: transform 0.2s;
+      }
+
+      &:hover {
+        .chevron-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .services {
+      position: relative;
+      overflow: visible;
+      height: 100%;
+
+      .dropdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        transform: translateY(-2.5rem);
+
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.2s,
+          visibility 0.2s;
+
+        width: 13.5rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+        color: var(--color-dark-gray);
+        background-color: white;
+        border-radius: 1rem;
+        padding: 0.8rem 0.5rem;
+        list-style: none;
+        z-index: 100;
+
+        .service {
+          border-radius: 0.5rem;
+          padding: 0.5rem 0.3rem;
+
+          &:hover {
+            color: var(--color-primary);
+            background-color: var(--color-light-primary);
+            cursor: pointer;
+          }
+        }
+      }
+
+      &:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 

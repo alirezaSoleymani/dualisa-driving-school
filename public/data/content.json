@@ -1,6 +1,14 @@
 {
   "navbar": {
-    "items": ["Home", "Services", "About Us", "Contact Us"]
+    "items": ["Home", "Services", "About Us", "Contact Us"],
+    "dropdownItems": [
+      "Category B Driving Lessons",
+      "First Aid Course",
+      "Theory Test Preparation Course",
+      "Traffic Study Course (VKU)",
+      "Completion Course (WAB)",
+      "Special Programs for Seniors and Anxious Learners"
+    ]
   },
   "home": {},
   "about-us": {},
