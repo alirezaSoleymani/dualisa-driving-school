@@ -19,11 +19,11 @@
 
     <!-- Nav Items -->
     @for (item of content().items; track $index) { @if (item !== "Services") {
-    <a>{{ item }} </a>
+    <a [routerLink]="item.route">{{ item.title }} </a>
     } @else {
     <div class="services">
-      <a
-        ><div class="content">{{ item }}</div>
+      <a [routerLink]="item.route"
+        ><div class="content">{{ item.title }}</div>
         <img
           src="/images/chevron-down.svg"
           alt="chevron-down"

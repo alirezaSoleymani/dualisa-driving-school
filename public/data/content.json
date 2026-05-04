@@ -1,6 +1,23 @@
 {
   "navbar": {
-    "items": ["Home", "Services", "About Us", "Contact Us"],
+    "items": [
+      {
+        "title": "Home",
+        "route": "/"
+      },
+      {
+        "title": "Services",
+        "route": "/services"
+      },
+      {
+        "title": "About Us",
+        "route": "/about-us"
+      },
+      {
+        "title": "Contact Us",
+        "route": "/contact-us"
+      }
+    ],
     "dropdownItems": [
       "Category B Driving Lessons",
       "First Aid Course",
