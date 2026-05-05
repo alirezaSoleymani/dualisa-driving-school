@@ -31,7 +31,39 @@
   "about-us": {},
   "contact-us": {},
   "services": {
-    "title": "Services"
+    "title": "Services",
+    "servicesDetails": [
+      {
+        "title": "Category B Driving Lessons",
+        "description": "Professional, patient, and modern driving lessons in safe training cars",
+        "imagePath": "/images/Category-B-Image-Curved.svg"
+      },
+      {
+        "title": "First Aid Course",
+        "description": "Learn how to react in emergency situations and recieve the official certificate",
+        "imagePath": "/images/First-Aid-Image-Curved.svg"
+      },
+      {
+        "title": "Theory Test Preparation Course",
+        "description": "Prepare efficiently for the Swiss theory exam with structured lessons, clear explanations, and practice questions that help you understand road rules instead of memorising them",
+        "imagePath": "/images/Theory-Test-Image-Curved.svg"
+      },
+      {
+        "title": "Traffic Study Course (VKU)",
+        "description": "The mandatory VKU course that teaches you how to recognize dangers, read traffic situations, and drive proactively — an essential step before the practical exam",
+        "imagePath": "/images/Traffic-Study-Image-Curved.svg"
+      },
+      {
+        "title": "Completion Course (WAB)",
+        "description": "Complete the mandatory WAB training day required during your 3‑year probation period to obtain your full Swiss driving license",
+        "imagePath": "/images/Completion-Course-Image-Curved.svg"
+      },
+      {
+        "title": "Special Programs for Seniors and Anxious Learners",
+        "description": "Gentle, patient, and individually adapted lessons designed for seniors, nervous beginners, and learners with specific needs",
+        "imagePath": "/images/Special-Program-Image-Curved.svg"
+      }
+    ]
   },
   "service-details": {},
   "not-found": {},

@@ -7,7 +7,42 @@
     color: white;
     font-size: 4rem;
     font-weight: 500;
-    // margin: 0;
     text-align: center;
+  }
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-top: 4rem;
+
+  .service-card {
+    position: relative;
+
+    .service-image {
+      position: relative;
+      height: 17rem;
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 1rem;
+
+      .service-title {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 1.15rem;
+      }
+    }
+
+    .service-description {
+      color: var(--color-medium-gray);
+      text-align: center;
+    }
   }
 }
