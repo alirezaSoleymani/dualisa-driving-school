@@ -1,0 +1,26 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+  padding: 7rem 20rem;
+
+  background-image: url("/images/shapes/net-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .description {
+    color: var(--color-medium-gray);
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}

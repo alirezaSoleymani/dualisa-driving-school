@@ -27,7 +27,12 @@
       "Special Programs for Seniors and Anxious Learners"
     ]
   },
-  "home": {},
+  "home": {
+    "intro": {
+      "heading": "Your Trusted Partner on the Road to Your License",
+      "description": "Supportive instructors, clear communication, and modern cars ensure a stress‑free path to your driving license"
+    }
+  },
   "aboutUs": {
     "title": "About Dualisa",
     "intro": {
