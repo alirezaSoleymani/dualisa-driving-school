@@ -39,19 +39,6 @@
       color: var(--color-medium-gray);
       height: 100%; // stretch to fill nav height
       cursor: pointer;
-
-      .chevron-icon {
-        align-self: center;
-        width: fit-content;
-        height: fit-content;
-        transition: transform 0.2s;
-      }
-
-      &:hover {
-        .chevron-icon {
-          transform: rotate(180deg);
-        }
-      }
     }
 
     .services {
@@ -97,6 +84,19 @@
       &:hover .dropdown {
         opacity: 1;
         visibility: visible;
+      }
+
+      .chevron-icon {
+        align-self: center;
+        width: fit-content;
+        height: fit-content;
+        transition: transform 0.2s;
+      }
+
+      &:hover {
+        .chevron-icon {
+          transform: rotate(180deg);
+        }
       }
     }
   }

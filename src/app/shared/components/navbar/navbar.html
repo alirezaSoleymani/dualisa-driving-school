@@ -16,7 +16,8 @@
     </svg>
 
     <!-- Nav Items -->
-    @for (item of content().items; track $index) { @if (item !== "Services") {
+    @for (item of content().items; track $index) { @if (item.title !==
+    "Services") {
     <a [routerLink]="item.route">{{ item.title }} </a>
     } @else {
     <div class="services">
