@@ -28,8 +28,14 @@
     ]
   },
   "home": {},
-  "about-us": {},
-  "contact-us": {},
+  "aboutUs": {
+    "title": "About Dualisa",
+    "intro": {
+      "heading": "Driving Education You Can Trust",
+      "description": "Since 2018, Dualisa has been dedicated to helping new drivers start their journey with confidence. With professional instruction and a supportive approach, we guide learners step by step toward their Swiss driving license"
+    }
+  },
+  "contactUs": {},
   "services": {
     "title": "Services",
     "servicesDetails": [
@@ -65,8 +71,8 @@
       }
     ]
   },
-  "service-details": {},
-  "not-found": {},
+  "serviceDetails": {},
+  "notFound": {},
   "footer": {
     "links": {
       "home": "Home",
