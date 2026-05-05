@@ -18,6 +18,7 @@
     "@angular/router": "^20.0.0",
     "@fontsource/afacad-flux": "^5.2.8",
     "rxjs": "~7.8.0",
+    "swiper": "^12.1.4",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.0"
   },

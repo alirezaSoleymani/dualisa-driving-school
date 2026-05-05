@@ -13,3 +13,37 @@
 
   <div class="description">{{content().intro.description}}</div>
 </section>
+
+<section class="slider">
+  <div class="text-wrapper">
+    <div class="heading"></div>
+    <div class="description"></div>
+  </div>
+
+  <div class="slider-wrapper">
+    <swiper-container
+      slides-per-view="1.5"
+      centered-slides="true"
+      space-between="20"
+      loop="true"
+      navigation-next-el=".custom-next"
+      navigation-prev-el=".custom-prev"
+      autoplay-delay="1000"
+      autoplay-disable-on-interaction="false"
+    >
+      @for (item of images; track $index) {
+      <swiper-slide>
+        <img [src]="item" />
+      </swiper-slide>
+      }
+    </swiper-container>
+
+    <!-- Custom navigation buttons -->
+    <div class="custom-prev">
+      <img src="/images/icons/arrow-left.svg" alt="" />
+    </div>
+    <div class="custom-next">
+      <img src="/images/icons/arrow-right.svg" alt="" />
+    </div>
+  </div>
+</section>
