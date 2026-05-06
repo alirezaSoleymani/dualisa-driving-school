@@ -38,6 +38,13 @@
     "intro": {
       "heading": "Driving Education You Can Trust",
       "description": "Since 2018, Dualisa has been dedicated to helping new drivers start their journey with confidence. With professional instruction and a supportive approach, we guide learners step by step toward their Swiss driving license"
+    },
+    "cars": {
+      "headingParts": [
+        { "text": "Our ", "class": "" },
+        { "text": "Modern Training Cars ", "class": "highlight" }
+      ],
+      "description": "Modern features, top‑level safety, and comfortable driving — the perfect environment to build confidence on the road"
     }
   },
   "contactUs": {},

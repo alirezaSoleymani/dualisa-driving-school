@@ -46,10 +46,29 @@
   }
 }
 
-.slider {
+.cars {
   margin: 5rem 0;
 
   .text-wrapper {
+    width: 45rem;
+    // padding: 0 6rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+
+    .heading {
+      font-size: 2.7rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      .highlight {
+        color: var(--color-primary);
+      }
+    }
+
+    .description {
+      color: var(--color-medium-gray);
+      font-size: 1.3rem;
+    }
   }
 
   .slider-wrapper {

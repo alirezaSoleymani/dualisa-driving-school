@@ -1,3 +1,5 @@
+@if(content()){
+
 <section class="hero">
   <div class="navbar-container">
     <app-navbar></app-navbar>
@@ -14,10 +16,15 @@
   <div class="description">{{content().intro.description}}</div>
 </section>
 
-<section class="slider">
+<section class="cars">
   <div class="text-wrapper">
-    <div class="heading"></div>
-    <div class="description"></div>
+    <div class="heading">
+      @for (part of content().cars.headingParts; track $index) {
+      <span [class.highlight]="part.class === 'highlight'">{{part.text}}</span>
+      }
+    </div>
+
+    <div class="description">{{content().cars.description}}</div>
   </div>
 
   <div class="slider-wrapper">
@@ -47,3 +54,4 @@
     </div>
   </div>
 </section>
+}
