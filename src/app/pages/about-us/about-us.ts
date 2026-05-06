@@ -28,6 +28,8 @@ export class AboutUs {
     '/images/car-photo.png',
     '/images/car-photo.png',
     '/images/car-photo.png',
+    '/images/car-photo.png',
+    '/images/car-photo.png',
   ];
 
   ngOnInit(): void {
