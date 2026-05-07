@@ -11,11 +11,17 @@ import { ContentService } from '../../services/content/content-service';
 export class Navbar implements OnInit {
   contentService = inject(ContentService);
   content = signal<any>(null);
-  isServicesOpen = signal(false);
+  isSubmenuOpen = signal(false);
+  isMenuOpen = signal(false);
 
-  toggleServices(event: Event) {
+  toggleMenu(event: Event) {
     event.preventDefault();
-    this.isServicesOpen.update((state) => !state);
+    this.isMenuOpen.update((state) => !state);
+  }
+
+  toggleSubmenu(event: Event) {
+    event.preventDefault();
+    this.isSubmenuOpen.update((state) => !state);
   }
 
   ngOnInit(): void {

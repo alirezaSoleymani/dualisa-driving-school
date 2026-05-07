@@ -18,7 +18,8 @@
         "route": "/contact-us"
       }
     ],
-    "dropdownItems": [
+    "servicesList": [
+      "All Services",
       "Category B Driving Lessons",
       "First Aid Course",
       "Theory Test Preparation Course",

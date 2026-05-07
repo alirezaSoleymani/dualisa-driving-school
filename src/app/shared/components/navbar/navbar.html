@@ -31,7 +31,7 @@
       </a>
 
       <ul class="dropdown">
-        @for (service of content().dropdownItems; track $index) {
+        @for (service of content().servicesList; track $index) {
         <li class="service">{{service}}</li>
         }
       </ul>
@@ -53,16 +53,26 @@
   </div>
 
   <div class="hamburger-menu">
-    <button><img src="/images/icons/hamburger-menu.svg" alt="" /></button>
+    <button>
+      <img
+        src="/images/icons/hamburger-menu.svg"
+        (click)="toggleMenu($event)"
+      />
+    </button>
+
+    @if (isMenuOpen()) {
+    <div class="menu-overlay" (click)="toggleMenu($event)"></div>
 
     <div class="menu">
       <div class="menu-items">
         @for (item of content().items; track $index) { @if (item.title !==
         "Services") {
-        <a [routerLink]="item.route">{{ item.title }} </a>
+        <a [routerLink]="item.route" (click)="toggleMenu($event)"
+          >{{ item.title }}
+        </a>
         } @else {
-        <div class="services-item" (click)="toggleServices($event)">
-          <a [routerLink]="item.route"
+        <div class="services-item" (click)="toggleSubmenu($event)">
+          <a
             ><div class="content">{{ item.title }}</div>
 
             <svg
@@ -80,10 +90,10 @@
             </svg>
           </a>
 
-          <div class="sub-items-wrapper">
-            @if (isServicesOpen()) { @for (item of content().dropdownItems;
-            track $index) {
-            <a class="sub-item">{{item}}</a>
+          <div class="submenu">
+            @if (isSubmenuOpen()) { @for (item of content().servicesList; track
+            $index) {
+            <a class="submenu-item">{{item}}</a>
             } }
           </div>
         </div>
@@ -91,5 +101,6 @@
         }}
       </div>
     </div>
+    }
   </div>
 </div>
