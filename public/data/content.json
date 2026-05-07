@@ -48,7 +48,9 @@
       "description": "Modern features, top‑level safety, and comfortable driving — the perfect environment to build confidence on the road"
     }
   },
-  "contactUs": {},
+  "contactUs": {
+    "title": "Contact Us"
+  },
   "services": {
     "title": "Services",
     "servicesDetails": [
