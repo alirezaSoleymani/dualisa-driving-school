@@ -126,15 +126,24 @@
     }
   }
 
-  .menu-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(7px);
-  }
-
   .hamburger-menu {
     display: none;
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(7px);
+
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
 
     button {
       border: none;
@@ -156,6 +165,13 @@
       right: 0;
       width: 30rem;
       background-color: var(--color-light-gray);
+
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+
+      &.open {
+        transform: translateX(0);
+      }
 
       .menu-items {
         display: flex;
