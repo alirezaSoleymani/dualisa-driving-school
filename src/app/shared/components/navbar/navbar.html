@@ -93,11 +93,10 @@
             </svg>
           </a>
 
-          <div class="submenu">
-            @if (isSubmenuOpen()) { @for (item of content().servicesList; track
-            $index) {
+          <div class="submenu" [class.open]="isSubmenuOpen()">
+            @for (item of content().servicesList; track $index) {
             <a class="submenu-item">{{item}}</a>
-            } }
+            }
           </div>
         </div>
 
