@@ -151,3 +151,25 @@
     }
   }
 }
+
+@media (max-width: 1290px) {
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      font-size: 5rem;
+    }
+
+    .navbar-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+}
