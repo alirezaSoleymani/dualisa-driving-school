@@ -54,5 +54,42 @@
 
   <div class="hamburger-menu">
     <button><img src="/images/icons/hamburger-menu.svg" alt="" /></button>
+
+    <div class="menu">
+      <div class="menu-items">
+        @for (item of content().items; track $index) { @if (item.title !==
+        "Services") {
+        <a [routerLink]="item.route">{{ item.title }} </a>
+        } @else {
+        <div class="services-item" (click)="toggleServices($event)">
+          <a [routerLink]="item.route"
+            ><div class="content">{{ item.title }}</div>
+
+            <svg
+              class="chevron-icon"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6666 5.66666L7.99998 10.3333L3.33331 5.66666"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <div class="sub-items-wrapper">
+            @if (isServicesOpen()) { @for (item of content().dropdownItems;
+            track $index) {
+            <a class="sub-item">{{item}}</a>
+            } }
+          </div>
+        </div>
+
+        }}
+      </div>
+    </div>
   </div>
 </div>
