@@ -21,6 +21,77 @@
     <p>{{content().title}}</p>
   </div>
 </section>
-}
 
-<!--width="1240"   height="395"-->
+<section class="main">
+  <div class="contact-info">
+    <div class="headline">
+      @for (text of content().contactInfo.headline; track $index) {
+      <span [class.highlight]="text.class === 'highlight'">{{text.text}}</span>
+      }
+    </div>
+
+    <div class="subheadline">{{content().contactInfo.subheadline}}</div>
+
+    <div class="info">
+      <div class="call-info">
+        <div class="title">{{content().contactInfo.callCenter.title}}</div>
+        <div class="first-number">
+          {{content().contactInfo.callCenter.firstPhoneNumber}}
+        </div>
+        <div class="second-number">
+          {{content().contactInfo.callCenter.secondPhoneNumber}}
+        </div>
+      </div>
+
+      <div class="online-contact">
+        <div class="email">
+          <div class="title">{{content().contactInfo.email.title}}</div>
+          <div class="email-address">
+            {{content().contactInfo.email.emailAddress}}
+          </div>
+        </div>
+
+        <div class="social-media">
+          <div class="title">{{content().contactInfo.socialMedia.title}}</div>
+
+          <div class="social-icons">
+            <button class="instagram">
+              <img
+                [src]="content().contactInfo.socialMedia.iconPaths.instagram"
+                alt="instagram-logo"
+              />
+            </button>
+
+            <button class="facebook">
+              <img
+                [src]="content().contactInfo.socialMedia.iconPaths.facebook"
+                alt="facebook-logo"
+              />
+            </button>
+
+            <button class="linkedin">
+              <img
+                [src]="content().contactInfo.socialMedia.iconPaths.linkedin"
+                alt="linkedin-logo"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="location">
+        <div class="title">{{content().contactInfo.location.title}}</div>
+        <div class="location-address">
+          {{content().contactInfo.location.locationAddress}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form"></div>
+</section>
+
+<div class="net-background">
+  <img src="/images/shapes/net-background-2.svg" alt="" />
+</div>
+}

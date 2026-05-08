@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,4 +26,97 @@
     color: white;
     font-size: 4rem;
   }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  gap: 10rem;
+
+  .contact-info {
+    padding-top: 5rem;
+    padding-left: 0.7rem;
+    .headline {
+      font-size: 3rem;
+
+      .highlight {
+        color: var(--color-primary);
+      }
+    }
+    .subheadline {
+      color: var(--color-medium-gray);
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+      }
+
+      .first-number,
+      .second-number,
+      .email-address,
+      .location-address {
+        color: var(--color-medium-gray);
+      }
+
+      // .call-info {
+      //   display: flex;
+      //   flex-direction: column;
+      //   // gap: 0.5rem;
+      // }
+
+      .online-contact {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .social-media .social-icons {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          border: none;
+          border-radius: 50%;
+          background-color: white;
+          padding: 0rem;
+
+          width: 1.5rem;
+          height: 1.5rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    height: 45rem;
+    background-color: var(--color-primary);
+    border-radius: 2.5rem;
+    margin-top: -3rem;
+  }
+}
+
+.net-background {
+  position: absolute;
+  left: 0;
+  top: 49rem;
+  z-index: -1;
+  transform: scale(1.1);
 }

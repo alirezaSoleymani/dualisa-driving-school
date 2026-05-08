@@ -49,7 +49,67 @@
     }
   },
   "contactUs": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+
+    "contactInfo": {
+      "headline": [
+        { "text": "We Are Always ", "class": "" },
+        { "text": "Ready ", "class": "highlight" },
+        { "text": "To Help You And Answer Your Questions", "class": "" }
+      ],
+
+      "subheadline": "Send us a massage about services and ask questions",
+      "callCenter": {
+        "title": "Call Center",
+        "firstPhoneNumber": "076 335 38 38",
+        "secondPhoneNumber": "xxxxxxxxxxx"
+      },
+
+      "email": {
+        "title": "Email",
+        "emailAddress": "fahrschule.dualisa@gmail.com"
+      },
+
+      "socialMedia": {
+        "title": "Social Networks",
+        "iconPaths": {
+          "instagram": "/images/icons/instagram-logo.svg",
+          "facebook": "/images/icons/facebook-logo.svg",
+          "linkedin": "/images/icons/linkedin-logo.svg"
+        }
+      },
+
+      "location": {
+        "title": "Our Location",
+        "locationAddress": "Falkenplatz 1, 3012 Bern"
+      }
+    },
+
+    "contactForm": {
+      "headline": "Get In Touch",
+      "subheadline": "Send us a massage about any questions you might have",
+
+      "inputFields": {
+        "name": { "label": "Name", "placeholder": "e.g. Anna Meier" },
+
+        "email": {
+          "label": "Email",
+          "placeholder": "e.g. anna.meier@example.com"
+        },
+
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "e.g. 076 555 12 34"
+        },
+
+        "textarea": {
+          "label": "Tell us about your needs",
+          "placeholder": "How can we help you?"
+        },
+
+        "submitBtn": "Send Request"
+      }
+    }
   },
   "services": {
     "title": "Services",
