@@ -91,6 +91,12 @@
   <div class="contact-form"></div>
 </section>
 
+<section class="map">
+  <google-map [center]="center" [zoom]="zoom" width="100%" height="100%">
+    <map-marker [position]="markerPosition"></map-marker>
+  </google-map>
+</section>
+
 <div class="net-background">
   <img src="/images/shapes/net-background-2.svg" alt="" />
 </div>
