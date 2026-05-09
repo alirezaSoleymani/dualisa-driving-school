@@ -91,10 +91,10 @@
           border: none;
           border-radius: 50%;
           background-color: white;
-          padding: 0rem;
+          padding: 0.4rem;
 
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2.2rem;
+          height: 2.2rem;
 
           img {
             width: 100%;
@@ -107,9 +107,10 @@
 
   .contact-form {
     height: 45rem;
-    background-color: var(--color-primary);
+    border: var(--color-primary) 1px solid;
     border-radius: 2.5rem;
     margin-top: -3rem;
+    overflow: hidden;
   }
 }
 

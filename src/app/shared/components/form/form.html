@@ -1,1 +1,35 @@
-<p>form works!</p>
+<div class="form-container">
+  <div class="headline">{{content().headline}}</div>
+  <div class="subheadline">{{content().subheadline}}</div>
+
+  <form [formGroup]="contactForm">
+    <label>{{content().inputFields.name.label}}</label>
+    <input
+      type="text"
+      formControlName="name"
+      [placeholder]="content().inputFields.name.placeholder"
+    />
+
+    <label>{{content().inputFields.email.label}}</label>
+    <input
+      type="text"
+      formControlName="name"
+      [placeholder]="content().inputFields.email.placeholder"
+    />
+
+    <label>{{content().inputFields.phoneNumber.label}}</label>
+    <input
+      type="text"
+      formControlName="name"
+      [placeholder]="content().inputFields.phoneNumber.placeholder"
+    />
+
+    <label>{{content().inputFields.message.label}}</label>
+    <textarea
+      formControlName="message"
+      [placeholder]="content().inputFields.message.placeholder"
+    ></textarea>
+
+    <button type="submit"></button>
+  </form>
+</div>

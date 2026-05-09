@@ -97,12 +97,12 @@
           "placeholder": "e.g. anna.meier@example.com"
         },
 
-        "phone": {
+        "phoneNumber": {
           "label": "Phone Number",
           "placeholder": "e.g. 076 555 12 34"
         },
 
-        "textarea": {
+        "message": {
           "label": "Tell us about your needs",
           "placeholder": "How can we help you?"
         },

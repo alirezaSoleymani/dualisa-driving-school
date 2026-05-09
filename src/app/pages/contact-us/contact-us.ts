@@ -2,10 +2,11 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { ContentService } from '../../shared/services/content/content-service';
 import { Navbar } from '../../shared/components/navbar/navbar';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { Form } from '../../shared/components/form/form';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [Navbar, GoogleMapsModule],
+  imports: [Navbar, GoogleMapsModule, Form],
   templateUrl: './contact-us.html',
   styleUrl: './contact-us.scss',
 })
