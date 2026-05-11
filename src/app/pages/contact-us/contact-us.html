@@ -89,12 +89,15 @@
   </div>
 
   <div class="contact-form">
-    <app-form [content]="content().contactForm"></app-form>
+    <app-contact-form
+      [headline]="content().contactForm.headline"
+      [subheadline]="content().contactForm.subheadline"
+    ></app-contact-form>
   </div>
 </section>
 
-<!-- <section class="map">
-  <google-map
+<section class="map">
+  <!-- <google-map
     [center]="center"
     [zoom]="zoom"
     width="100%"
@@ -103,8 +106,8 @@
   >
     <map-marker [position]="markerPosition" [options]="mapMarkerOptions">
     </map-marker>
-  </google-map>
-</section> -->
+  </google-map> -->
+</section>
 
 <div class="net-background">
   <img src="/images/shapes/net-background-2.svg" alt="" />

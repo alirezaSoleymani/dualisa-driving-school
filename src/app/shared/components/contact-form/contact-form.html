@@ -1,0 +1,53 @@
+<div class="form-container">
+  <div class="headline">{{headline()}}</div>
+  <div class="subheadline">{{subheadline()}}</div>
+
+  <form [formGroup]="contactForm">
+    <div class="input-wrapper">
+      <label>{{content().inputFields.name.label}}</label>
+      <input
+        type="text"
+        class="input"
+        formControlName="name"
+        [placeholder]="content().inputFields.name.placeholder"
+      />
+    </div>
+
+    <div class="online-contact">
+      <div class="input-wrapper">
+        <label>{{content().inputFields.email.label}}</label>
+        <input
+          type="text"
+          class="input"
+          formControlName="email"
+          [placeholder]="content().inputFields.email.placeholder"
+        />
+      </div>
+
+      <div class="input-wrapper">
+        <label>{{content().inputFields.phoneNumber.label}}</label>
+        <input
+          type="text"
+          class="input"
+          formControlName="phoneNumber"
+          [placeholder]="content().inputFields.phoneNumber.placeholder"
+        />
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <label>{{content().inputFields.message.label}}</label>
+      <textarea
+        class="input textarea"
+        formControlName="message"
+        [placeholder]="content().inputFields.message.placeholder"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <button type="submit">
+      <span class="btnText">{{content().submitBtn}}</span>
+      <span class="triple-arrow-icon"> >>></span>
+    </button>
+  </form>
+</div>

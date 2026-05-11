@@ -3,11 +3,12 @@
 body {
   margin: 0;
   font-family: var(--font-primary);
+  background-color: #fafafa;
 }
 
 :root {
-  --color-primary: #dc5e15;
   --color-light-primary: #fff6ed;
+  --color-primary: #dc5e15;
 
   --color-off-white: #f0f0f0;
   --color-light-gray: #f8f8f8;

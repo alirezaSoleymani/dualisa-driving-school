@@ -87,28 +87,7 @@
 
     "contactForm": {
       "headline": "Get In Touch",
-      "subheadline": "Send us a massage about any questions you might have",
-
-      "inputFields": {
-        "name": { "label": "Name", "placeholder": "e.g. Anna Meier" },
-
-        "email": {
-          "label": "Email",
-          "placeholder": "e.g. anna.meier@example.com"
-        },
-
-        "phoneNumber": {
-          "label": "Phone Number",
-          "placeholder": "e.g. 076 555 12 34"
-        },
-
-        "message": {
-          "label": "Tell us about your needs",
-          "placeholder": "How can we help you?"
-        },
-
-        "submitBtn": "Send Request"
-      }
+      "subheadline": "Send us a massage about any questions you might have"
     }
   },
   "services": {
@@ -147,6 +126,28 @@
     ]
   },
   "serviceDetails": {},
+  "contactForm": {
+    "inputFields": {
+      "name": { "label": "Name", "placeholder": "e.g. Anna Meier" },
+
+      "email": {
+        "label": "Email",
+        "placeholder": "e.g. anna.meier@example.com"
+      },
+
+      "phoneNumber": {
+        "label": "Phone Number",
+        "placeholder": "e.g. 076 555 12 34"
+      },
+
+      "message": {
+        "label": "Tell us about your needs",
+        "placeholder": "How can we help you?"
+      }
+    },
+
+    "submitBtn": "Send Request"
+  },
   "notFound": {},
   "footer": {
     "links": {
