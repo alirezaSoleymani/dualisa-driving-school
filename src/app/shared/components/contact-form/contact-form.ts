@@ -2,7 +2,12 @@ import { config } from './../../../../config';
 import { HttpClient } from '@angular/common/http';
 import { ContentService } from '../../services/content/content-service';
 import { Component, inject, input, OnInit, signal } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -23,6 +28,7 @@ export class ContactForm implements OnInit {
     email: new FormControl(''),
     phoneNumber: new FormControl(''),
     message: new FormControl(''),
+    _honey: new FormControl(''),
   });
 
   ngOnInit(): void {
@@ -32,7 +38,7 @@ export class ContactForm implements OnInit {
   }
 
   onSubmit() {
-    if (this.contactForm.invalid) return;
+    const hcaptchaToken = (window as any).hcaptcha?.getResponse?.();
 
     const formValue = this.contactForm.value;
     const payload = new FormData();
@@ -44,13 +50,18 @@ export class ContactForm implements OnInit {
     payload.append('message', formValue.message ?? '');
     payload.append('subject', 'New enquiry from driving school website');
 
+    payload.append('h-captcha-response', hcaptchaToken);
+
     this.http.post(config.web3forms.endpoint, payload).subscribe({
       next: () => {
         console.log('Email sent.');
         this.contactForm.reset();
+
+        (window as any).hcaptcha?.reset?.();
       },
       error: () => {
         console.error('Failed to send email');
+        (window as any).hcaptcha?.reset?.();
       },
     });
   }

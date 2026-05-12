@@ -45,6 +45,17 @@
       ></textarea>
     </div>
 
+    <div class="captcha-verification">
+      <div class="h-captcha" data-captcha="true"></div>
+
+      <input
+        type="hidden"
+        formControlName="_honey"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
+
     <button type="submit" [disabled]="contactForm.invalid">
       <span class="btnText">{{content().submitBtn}}</span>
       <span class="triple-arrow-icon"> >>></span>
