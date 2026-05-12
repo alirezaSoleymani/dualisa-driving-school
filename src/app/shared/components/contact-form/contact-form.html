@@ -2,7 +2,7 @@
   <div class="headline">{{headline()}}</div>
   <div class="subheadline">{{subheadline()}}</div>
 
-  <form [formGroup]="contactForm">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="input-wrapper">
       <label>{{content().inputFields.name.label}}</label>
       <input
@@ -45,7 +45,7 @@
       ></textarea>
     </div>
 
-    <button type="submit">
+    <button type="submit" [disabled]="contactForm.invalid">
       <span class="btnText">{{content().submitBtn}}</span>
       <span class="triple-arrow-icon"> >>></span>
     </button>
