@@ -3,9 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { ContentService } from '../../services/content/content-service';
 import { Component, inject, input, OnInit, signal } from '@angular/core';
 import {
+  AbstractControl,
   FormControl,
   FormGroup,
   ReactiveFormsModule,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 
@@ -23,27 +25,37 @@ export class ContactForm implements OnInit {
   headline = input('');
   subheadline = input('');
 
-  contactForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    phoneNumber: new FormControl(''),
-    message: new FormControl(''),
-    captchaToken: new FormControl('', Validators.required),
-    _honey: new FormControl(''),
-  });
+  contactForm = new FormGroup(
+    {
+      name: new FormControl(''),
+      email: new FormControl(''),
+      phoneNumber: new FormControl(''),
+      message: new FormControl(''),
+      _honey: new FormControl(''),
+    },
+    {
+      validators: [
+        (group: AbstractControl): ValidationErrors | null => {
+          const email = group.get('email')?.value?.trim();
+          const phone = group.get('phoneNumber')?.value?.trim();
+          return email || phone ? null : { emailOrPhoneRequired: true };
+        },
+      ],
+    },
+  );
 
   ngOnInit(): void {
-    (window as any).onCaptchaTokenReceived = (token: string) => {
-      this.contactForm.controls.captchaToken.setValue(token);
-    };
-
     this.contentService.getContent('contactForm').subscribe((data: any) => {
       this.content.set(data);
     });
   }
 
   onSubmit() {
-    const hcaptchaToken = this.contactForm.value.captchaToken;
+    if (this.contactForm.invalid) {
+      return;
+    }
+
+    const hcaptchaToken = (window as any).hcaptcha?.getResponse();
 
     const formValue = this.contactForm.value;
     const payload = new FormData();
