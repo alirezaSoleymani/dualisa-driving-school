@@ -28,17 +28,22 @@ export class ContactForm implements OnInit {
     email: new FormControl(''),
     phoneNumber: new FormControl(''),
     message: new FormControl(''),
+    captchaToken: new FormControl('', Validators.required),
     _honey: new FormControl(''),
   });
 
   ngOnInit(): void {
+    (window as any).onCaptchaTokenReceived = (token: string) => {
+      this.contactForm.controls.captchaToken.setValue(token);
+    };
+
     this.contentService.getContent('contactForm').subscribe((data: any) => {
       this.content.set(data);
     });
   }
 
   onSubmit() {
-    const hcaptchaToken = (window as any).hcaptcha?.getResponse?.();
+    const hcaptchaToken = this.contactForm.value.captchaToken;
 
     const formValue = this.contactForm.value;
     const payload = new FormData();
@@ -50,7 +55,7 @@ export class ContactForm implements OnInit {
     payload.append('message', formValue.message ?? '');
     payload.append('subject', 'New enquiry from driving school website');
 
-    payload.append('h-captcha-response', hcaptchaToken);
+    payload.append('h-captcha-response', hcaptchaToken ?? '');
 
     this.http.post(config.web3forms.endpoint, payload).subscribe({
       next: () => {

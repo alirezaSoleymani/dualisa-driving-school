@@ -46,7 +46,11 @@
     </div>
 
     <div class="captcha-verification">
-      <div class="h-captcha" data-captcha="true"></div>
+      <div
+        class="h-captcha"
+        data-captcha="true"
+        data-captcha-callback="onCaptchaTokenReceived"
+      ></div>
 
       <input
         type="hidden"
@@ -56,7 +60,7 @@
       />
     </div>
 
-    <button type="submit" [disabled]="contactForm.invalid">
+    <button type="submit">
       <span class="btnText">{{content().submitBtn}}</span>
       <span class="triple-arrow-icon"> >>></span>
     </button>
