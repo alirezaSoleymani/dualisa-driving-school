@@ -48,7 +48,7 @@
         }
 
         &.not-valid {
-          border: var(--color-danger) solid 1px;
+          border-color: var(--color-danger);
         }
       }
     }
@@ -75,6 +75,7 @@
     .errorMessage {
       color: var(--color-danger);
       margin-top: -0.75rem;
+      font-size: 1rem;
     }
 
     .captcha-verification {

@@ -38,10 +38,7 @@
     </div>
 
     @if (submitted()) {
-    <small class="errorMessage"
-      >*Please register at least one valid form of communication so we can get
-      in touch with you.
-    </small>
+    <small class="errorMessage">{{content().errorMessage}}</small>
     }
 
     <div class="input-wrapper">

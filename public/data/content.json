@@ -146,6 +146,7 @@
       }
     },
 
+    "errorMessage": "*Please register at least one valid form of communication so we can get in touch with you.",
     "submitBtn": "Send Request"
   },
   "notFound": {},
