@@ -19,6 +19,7 @@
         <input
           type="text"
           class="input"
+          [class.not-valid]="submitted()"
           formControlName="email"
           [placeholder]="content().inputFields.email.placeholder"
         />
@@ -29,11 +30,19 @@
         <input
           type="text"
           class="input"
+          [class.not-valid]="submitted()"
           formControlName="phoneNumber"
           [placeholder]="content().inputFields.phoneNumber.placeholder"
         />
       </div>
     </div>
+
+    @if (submitted()) {
+    <small class="errorMessage"
+      >*Please register at least one valid form of communication so we can get
+      in touch with you.
+    </small>
+    }
 
     <div class="input-wrapper">
       <label>{{content().inputFields.message.label}}</label>

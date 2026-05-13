@@ -22,6 +22,8 @@ export class ContactForm implements OnInit {
   http = inject(HttpClient);
 
   content = signal<any>(null);
+  submitted = signal(false);
+
   headline = input('');
   subheadline = input('');
 
@@ -51,6 +53,8 @@ export class ContactForm implements OnInit {
   }
 
   onSubmit() {
+    this.submitted.set(true);
+
     if (this.contactForm.invalid) {
       return;
     }
@@ -81,5 +85,7 @@ export class ContactForm implements OnInit {
         (window as any).hcaptcha?.reset?.();
       },
     });
+
+    this.submitted.set(false);
   }
 }
