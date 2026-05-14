@@ -18,6 +18,7 @@
         "route": "/contact-us"
       }
     ],
+
     "servicesList": [
       "All Services",
       "Category B Driving Lessons",
@@ -31,21 +32,36 @@
   "home": {
     "intro": {
       "heading": "Your Trusted Partner on the Road to Your License",
-      "description": "Supportive instructors, clear communication, and modern cars ensure a stress‑free path to your driving license"
+      "description": "Supportive instructors, clear communication, and modern cars ensure a stress-free path to your driving license"
+    },
+
+    "seo": {
+      "title": "Home | Dualisa Driving School - Your Partner for the Swiss Driving License",
+      "description": "Professional driving school in Bern offering patient instructors, modern cars, and flexible lessons. Start your journey to a stress-free driving license today.",
+      "image": "/images/Category-B-Image.png",
+      "type": "website"
     }
   },
   "aboutUs": {
     "title": "About Dualisa",
+
     "intro": {
       "heading": "Driving Education You Can Trust",
       "description": "Since 2018, Dualisa has been dedicated to helping new drivers start their journey with confidence. With professional instruction and a supportive approach, we guide learners step by step toward their Swiss driving license"
     },
+
     "cars": {
       "headingParts": [
         { "text": "Our ", "class": "" },
         { "text": "Modern Training Cars ", "class": "highlight" }
       ],
-      "description": "Modern features, top‑level safety, and comfortable driving — the perfect environment to build confidence on the road"
+      "description": "Modern features, top-level safety, and comfortable driving — the perfect environment to build confidence on the road"
+    },
+
+    "seo": {
+      "title": "About Us | Dualisa Driving School - Since 2018 in Bern",
+      "description": "Learn about Dualisa's experienced instructors, teaching philosophy, and modern training cars. We guide you step by step toward your Swiss driving license.",
+      "type": "website"
     }
   },
   "contactUs": {
@@ -82,9 +98,13 @@
       "location": {
         "title": "Our Location",
         "locationAddress": "Falkenplatz 1, 3012 Bern"
+      },
+      "seo": {
+        "title": "Contact Us | Dualisa Driving School - Get in Touch",
+        "description": "Have questions about driving lessons, theory exams, or special programs? Call, email, or use our contact form. We reply within 24 hours.",
+        "type": "website"
       }
     },
-
     "contactForm": {
       "headline": "Get In Touch",
       "subheadline": "Send us a massage about any questions you might have"
@@ -92,44 +112,55 @@
   },
   "services": {
     "title": "Services",
+
     "servicesDetails": [
       {
         "title": "Category B Driving Lessons",
         "description": "Professional, patient, and modern driving lessons in safe training cars",
         "imagePath": "/images/Category-B-Image-Curved.svg"
       },
+
       {
         "title": "First Aid Course",
         "description": "Learn how to react in emergency situations and recieve the official certificate",
         "imagePath": "/images/First-Aid-Image-Curved.svg"
       },
+
       {
         "title": "Theory Test Preparation Course",
         "description": "Prepare efficiently for the Swiss theory exam with structured lessons, clear explanations, and practice questions that help you understand road rules instead of memorising them",
         "imagePath": "/images/Theory-Test-Image-Curved.svg"
       },
+
       {
         "title": "Traffic Study Course (VKU)",
         "description": "The mandatory VKU course that teaches you how to recognize dangers, read traffic situations, and drive proactively — an essential step before the practical exam",
         "imagePath": "/images/Traffic-Study-Image-Curved.svg"
       },
+
       {
         "title": "Completion Course (WAB)",
-        "description": "Complete the mandatory WAB training day required during your 3‑year probation period to obtain your full Swiss driving license",
+        "description": "Complete the mandatory WAB training day required during your 3-year probation period to obtain your full Swiss driving license",
         "imagePath": "/images/Completion-Course-Image-Curved.svg"
       },
+
       {
         "title": "Special Programs for Seniors and Anxious Learners",
         "description": "Gentle, patient, and individually adapted lessons designed for seniors, nervous beginners, and learners with specific needs",
         "imagePath": "/images/Special-Program-Image-Curved.svg"
       }
-    ]
+    ],
+
+    "seo": {
+      "title": "Our Services | Dualisa Driving School - Lessons & Courses in Bern",
+      "description": "Category B driving lessons, first aid course, theory test preparation, VKU, WAB, and special programs for seniors. Find the right course for your license.",
+      "type": "website"
+    }
   },
   "serviceDetails": {},
   "contactForm": {
     "inputFields": {
       "name": { "label": "Name", "placeholder": "e.g. Anna Meier" },
-
       "email": {
         "label": "Email",
         "placeholder": "e.g. anna.meier@example.com"

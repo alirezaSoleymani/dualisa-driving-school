@@ -51,7 +51,12 @@ export class SeoService {
     this.updateOpenGraph('og:title', seoData.title);
     this.updateOpenGraph('og:description', seoData.description);
 
-    if (seoData.image) this.updateOpenGraph('og:image', seoData.image);
+    if (seoData.image) {
+      this.updateOpenGraph('og:image', seoData.image);
+    } else {
+      this.metaService.removeTag('property="og:image"');
+    }
+
     if (seoData.url) this.updateOpenGraph('og:url', seoData.url);
     if (seoData.type) this.updateOpenGraph('og:type', seoData.type);
 

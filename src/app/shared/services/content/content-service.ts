@@ -10,6 +10,17 @@ export class ContentService {
 
   constructor(private http: HttpClient) {}
 
+  getAllContent() {
+    if (this.allContent) return of(this.allContent);
+
+    return this.http.get('/data/content.json').pipe(
+      map((data: any) => {
+        this.allContent = data;
+        return data;
+      }),
+    );
+  }
+
   getContent(page: string): Observable<any> {
     if (this.allContent) return of(this.allContent[page]);
 
