@@ -11,8 +11,10 @@ import { ContentService } from '../../services/content/content-service';
 export class Navbar implements OnInit {
   contentService = inject(ContentService);
   content = signal<any>(null);
-  isSubmenuOpen = signal(false);
+  dropdownContent: any;
+
   isMenuOpen = signal(false);
+  isSubmenuOpen = signal(false);
 
   toggleMenu(event: Event) {
     event.preventDefault();
@@ -27,6 +29,11 @@ export class Navbar implements OnInit {
   ngOnInit(): void {
     this.contentService.getContent('navbar').subscribe((data) => {
       this.content.set(data);
+    });
+
+    this.contentService.getContent('services').subscribe((data) => {
+      this.dropdownContent = data.servicesDetails;
+      console.log(this.dropdownContent);
     });
   }
 }

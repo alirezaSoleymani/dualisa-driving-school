@@ -223,8 +223,8 @@
           max-height: 0;
           overflow: hidden;
           transition:
-            max-height 1s ease-in-out,
-            margin 1s ease-in-out;
+            max-height 0.7s ease-in-out,
+            margin 0.7s ease-in-out;
 
           &.open {
             max-height: 20rem;

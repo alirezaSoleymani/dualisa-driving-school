@@ -31,8 +31,10 @@
       </a>
 
       <ul class="dropdown">
-        @for (service of content().servicesList; track $index) {
-        <li class="service">{{service}}</li>
+        @for (service of dropdownContent; track $index) {
+        <li class="service" [routerLink]="['/services', service.id]">
+          {{service.title}}
+        </li>
         }
       </ul>
     </div>
@@ -94,8 +96,13 @@
           </a>
 
           <div class="submenu" [class.open]="isSubmenuOpen()">
-            @for (item of content().servicesList; track $index) {
-            <a class="submenu-item">{{item}}</a>
+            <a class="submenu-item" [routerLink]="item.route"
+              >{{content().allServices}}</a
+            >
+            @for (service of dropdownContent; track $index) {
+            <a class="submenu-item" [routerLink]="['/services', service.id]"
+              >{{service.title}}</a
+            >
             }
           </div>
         </div>

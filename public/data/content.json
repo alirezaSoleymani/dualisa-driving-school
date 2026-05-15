@@ -19,15 +19,7 @@
       }
     ],
 
-    "servicesList": [
-      "All Services",
-      "Category B Driving Lessons",
-      "First Aid Course",
-      "Theory Test Preparation Course",
-      "Traffic Study Course (VKU)",
-      "Completion Course (WAB)",
-      "Special Programs for Seniors and Anxious Learners"
-    ]
+    "allServices": "All Services"
   },
   "home": {
     "intro": {
@@ -115,39 +107,106 @@
 
     "servicesDetails": [
       {
+        "id": "category-b",
         "title": "Category B Driving Lessons",
         "description": "Professional, patient, and modern driving lessons in safe training cars",
-        "imagePath": "/images/Category-B-Image-Curved.svg"
-      },
+        "detailedContentTitle": "Personalized Driving Lessons for Every Level",
+        "detailedContent": "Whether you are a complete beginner or already have some experience, our instructors adapt each lesson to your pace and learning style.\nYou will learn parking, maneuvering, city driving, highway driving, hazard awareness, and exam-relevant techniques.\nWe prioritize calm instruction, modern teaching methods, and clear feedback so that your progress feels consistent and stress-free.\nAutomatic and manual cars are available.",
+        "defaultPrice": "100.00",
+        "discountedPrice": "",
+        "pricingDetailsDescription": "Lessons are billed per session. A package of 10 lessons includes the 11th lesson for free. Payment can be made per lesson or in advance for the discounted package.",
+        "imagePath": "/images/Category-B-Image-Curved.svg",
 
+        "seo": {
+          "title": "Category B Driving Lessons | Dualisa Driving School",
+          "description": "Professional driving lessons in Bern for beginners and experienced learners. Automatic/manual, patient instructors, exam preparation.",
+          "type": "website"
+        }
+      },
       {
+        "id": "first-aid",
         "title": "First Aid Course",
         "description": "Learn how to react in emergency situations and recieve the official certificate",
-        "imagePath": "/images/First-Aid-Image-Curved.svg"
-      },
+        "detailedContentTitle": "What You Learn in the First Aid Course",
+        "detailedContent": "Our First Aid Course teaches you the essential skills needed to act confidently and responsibly in emergencies. The course follows official Swiss guidelines and covers accident response, life-saving techniques, resuscitation (CPR), wound care, and how to secure the accident site.\nAt the end of the course, you will receive the official Nothelfer certificate, required for your learner's permit application. Our classes are clear, practical, and suitable for complete beginners.",
+        "defaultPrice": "119.00",
+        "discountedPrice": "",
+        "pricingDetailsDescription": "Price includes all course materials and the official certificate required for your learner’s permit in Switzerland. Payment is due at the time of registration.",
+        "imagePath": "/images/First-Aid-Image-Curved.svg",
 
+        "seo": {
+          "title": "First Aid Course | Nothelfer Certificate for Learner's Permit",
+          "description": "Swiss first aid course with official certificate. CPR, accident response, wound care – required for your driving license application.",
+          "type": "website"
+        }
+      },
       {
+        "id": "theory-test",
         "title": "Theory Test Preparation Course",
         "description": "Prepare efficiently for the Swiss theory exam with structured lessons, clear explanations, and practice questions that help you understand road rules instead of memorising them",
-        "imagePath": "/images/Theory-Test-Image-Curved.svg"
-      },
+        "detailedContentTitle": "Master the Swiss Traffic Rules with Confidence",
+        "detailedContent": "This course guides you through all essential topics of the Swiss theory exam. We explain traffic rules, signs, priorities, dangers, and safe driving behavior in a simple, structured way.\nYou'll practice with official question formats, learn strategies to avoid common mistakes, and understand the logic behind each rule. The goal is not only to pass the exam but to build a strong foundation for your practical driving lessons.",
+        "defaultPrice": "80.00",
+        "discountedPrice": "",
+        "pricingDetailsDescription": "The price is per lesson and can be paid individually. Students may book as many sessions as needed to prepare for the Swiss theory exam.",
+        "imagePath": "/images/Theory-Test-Image-Curved.svg",
 
+        "seo": {
+          "title": "Theory Test Preparation Course | Swiss Driving Exam Prep",
+          "description": "Structured course for the Swiss theory exam. Learn traffic rules, signs, and safe driving behavior with practice questions.",
+          "type": "website"
+        }
+      },
       {
+        "id": "traffic-study",
         "title": "Traffic Study Course (VKU)",
         "description": "The mandatory VKU course that teaches you how to recognize dangers, read traffic situations, and drive proactively — an essential step before the practical exam",
-        "imagePath": "/images/Traffic-Study-Image-Curved.svg"
-      },
+        "detailedContentTitle": "Your Mandatory VKU Explained Clearly",
+        "detailedContent": "In this course, you learn how to assess traffic situations, identify risks early, and adapt your driving to weather, traffic, and road conditions.\nThe VKU is required by Swiss law before you can register for the practical driving test.\nOur course is taught with real examples, videos, and interactive exercises so you can understand how to drive defensively and safely in everyday situations.",
+        "defaultPrice": "168.00",
+        "discountedPrice": "",
+        "pricingDetailsDescription": "This is a fixed price for the complete VKU course. Payment confirms your seat and must be completed before the first session.",
+        "imagePath": "/images/Traffic-Study-Image-Curved.svg",
 
+        "seo": {
+          "title": "Traffic Study Course (VKU) | Mandatory Swiss Driving Test Requirement",
+          "description": "Mandatory VKU course for the Swiss practical driving test. Learn hazard detection, defensive driving, and situational awareness.",
+          "type": "website"
+        }
+      },
       {
+        "id": "completion-course",
         "title": "Completion Course (WAB)",
         "description": "Complete the mandatory WAB training day required during your 3-year probation period to obtain your full Swiss driving license",
-        "imagePath": "/images/Completion-Course-Image-Curved.svg"
-      },
+        "detailedContentTitle": "Your Final Step to the Full License",
+        "detailedContent": "After receiving your probationary license, Swiss law requires you to attend the WAB completion course within three years.\nIn this training, you improve your advanced driving skills through controlled exercises on special training grounds.\nYou learn braking techniques, lane control, eco-driving, hazard management, and how to better understand your vehicle's limits.\nUpon completion, you receive the certificate needed to convert your probationary license into a full Swiss license.",
+        "defaultPrice": "200.00",
+        "discountedPrice": "",
+        "pricingDetailsDescription": "The price covers the full mandatory course day required during the probationary period. Payment is needed to secure your spot at the training center.",
+        "imagePath": "/images/Completion-Course-Image-Curved.svg",
 
+        "seo": {
+          "title": "Completion Course (WAB) | Full Swiss Driving License Step",
+          "description": "Mandatory WAB course for probationary license holders. Advanced driving skills, braking, lane control – get your full Swiss license.",
+          "type": "website"
+        }
+      },
       {
+        "id": "special-programs",
         "title": "Special Programs for Seniors and Anxious Learners",
         "description": "Gentle, patient, and individually adapted lessons designed for seniors, nervous beginners, and learners with specific needs",
-        "imagePath": "/images/Special-Program-Image-Curved.svg"
+        "detailedContentTitle": "Supportive Training Tailored to Your Needs",
+        "detailedContent": "This program is designed for learners who need extra guidance, reassurance, or a slower learning pace.\nFor seniors, we focus on refreshing traffic knowledge, adapting to modern traffic density, and building safe driving habits.\nFor anxious learners, we use calm, step-by-step methods to help reduce stress and increase confidence behind the wheel.\nThe goal is to create a comfortable and supportive learning environment where everyone can succeed.",
+        "defaultPrice": "100.00",
+        "discountedPrice": "",
+        "pricingDetailsDescription": "This rate applies per lesson and includes personalized instruction tailored to the driver’s needs. Payment is made after each session unless otherwise arranged.",
+        "imagePath": "/images/Special-Program-Image-Curved.svg",
+
+        "seo": {
+          "title": "Special Programs for Seniors & Anxious Learners | Patient Driving Lessons",
+          "description": "Gentle, adaptive driving lessons for seniors or nervous beginners in Bern. Reduce anxiety and gain confidence behind the wheel.",
+          "type": "website"
+        }
       }
     ],
 
