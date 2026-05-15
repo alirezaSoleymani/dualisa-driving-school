@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { NavigationStart, RouterLink } from '@angular/router';
 import { ContentService } from '../../services/content/content-service';
 
 @Component({
@@ -16,9 +16,14 @@ export class Navbar implements OnInit {
   isMenuOpen = signal(false);
   isSubmenuOpen = signal(false);
 
-  toggleMenu(event: Event) {
+  openMenu(event: Event) {
     event.preventDefault();
-    this.isMenuOpen.update((state) => !state);
+    this.isMenuOpen.set(true);
+  }
+
+  closeMenus(event: Event) {
+    this.isMenuOpen.set(false);
+    this.isSubmenuOpen.set(false);
   }
 
   toggleSubmenu(event: Event) {
