@@ -30,6 +30,20 @@ body {
   --page-top-padding: 5rem;
 }
 
+.send-request-btn {
+  margin: 0 auto;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 1.7rem;
+  padding: 1.5rem 2.1rem;
+  font-size: 1.1rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 1290px) {
   html {
     font-size: 85%;
