@@ -38,7 +38,6 @@ export class Navbar implements OnInit {
 
     this.contentService.getContent('services').subscribe((data) => {
       this.dropdownContent = data.servicesDetails;
-      console.log(this.dropdownContent);
     });
   }
 }

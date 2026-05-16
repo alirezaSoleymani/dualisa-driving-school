@@ -2,6 +2,8 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ContentService } from '../../shared/services/content/content-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Service } from '../../shared/models/service.model';
+import { SeoService } from '../../shared/services/seo/seo-service';
+import { config } from '../../../config';
 
 @Component({
   selector: 'app-service-details',
@@ -13,6 +15,7 @@ export class ServiceDetails implements OnInit {
   contentService = inject(ContentService);
   route = inject(ActivatedRoute);
   router = inject(Router);
+  seoService = inject(SeoService);
 
   content: any;
 
@@ -27,9 +30,29 @@ export class ServiceDetails implements OnInit {
 
   loadService(id: string) {
     this.contentService.getContent('services').subscribe((data) => {
-      this.content = data.servicesDetails.find(
+      const service = data.servicesDetails.find(
         (service: Service) => service.id === id,
       );
+
+      if (service) {
+        this.content = service;
+
+        const currentPath = this.router.url.split('?')[0];
+
+        const seoData = service.seo;
+        console.log(seoData);
+        const absoluteUrl = `${config.baseUrl}${currentPath}`;
+        console.log(absoluteUrl);
+        const absoluteImageUrl = seoData.image
+          ? `${config.baseUrl}${seoData.image}`
+          : undefined;
+
+        this.seoService.updatePageMetaData({
+          ...seoData,
+          absoluteUrl,
+          absoluteImageUrl,
+        });
+      }
     });
   }
 }
