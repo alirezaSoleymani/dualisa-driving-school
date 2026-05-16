@@ -39,6 +39,10 @@
       color: var(--color-medium-gray);
       height: 100%; // stretch to fill nav height
       cursor: pointer;
+
+      &.active {
+        color: var(--color-primary);
+      }
     }
 
     .services {

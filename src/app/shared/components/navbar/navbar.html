@@ -18,11 +18,21 @@
     <!-- Nav Items -->
     @for (item of content().items; track $index) { @if (item.title !==
     "Services") {
-    <a [routerLink]="item.route">{{ item.title }} </a>
+    <a
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      {{ item.title }}
+    </a>
     } @else {
     <div class="services">
-      <a [routerLink]="item.route"
-        ><div class="content">{{ item.title }}</div>
+      <a
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+        <div class="content">{{ item.title }}</div>
         <img
           src="/images/icons/chevron-down.svg"
           alt="chevron-down"
