@@ -1,12 +1,68 @@
 h1 {
   font-size: 3rem;
 }
+
+.hero {
+  position: relative;
+  margin-bottom: 3rem;
+  aspect-ratio: 1240/ 486;
+
+  display: grid;
+  grid-template-areas: "stack";
+
+  > * {
+    grid-area: stack;
+  }
+
+  .shape-mask {
+    // position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    // aspect-ratio: 1240/ 486;
+
+    background-image: url("/images/Category-B-Image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    mask-image: url("/images/shapes/service-details-shape.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  app-navbar {
+    align-self: start;
+    z-index: 2;
+  }
+
+  .content {
+    place-self: center; // center vertically and horizontally
+    text-align: center;
+    z-index: 1;
+
+    .title {
+      color: white;
+      text-align: center;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    .description {
+      color: var(--color-off-white);
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+}
+
 .info {
   position: relative;
   white-space: pre-line;
 
   h2 {
-    color: var(--color-dark-gray);
     font-size: 2.5rem;
     margin: 0;
   }
@@ -19,8 +75,8 @@ h1 {
 
 .net-background {
   position: absolute;
-  top: 12rem;
+  top: 30rem;
   left: 15rem;
 
-  z-index: -1;
+  z-index: -2;
 }

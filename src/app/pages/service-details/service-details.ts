@@ -1,3 +1,4 @@
+import { Navbar } from './../../shared/components/navbar/navbar';
 import { Component, inject, OnInit } from '@angular/core';
 import { ContentService } from '../../shared/services/content/content-service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -7,7 +8,7 @@ import { config } from '../../../config';
 
 @Component({
   selector: 'app-service-details',
-  imports: [],
+  imports: [Navbar],
   templateUrl: './service-details.html',
   styleUrl: './service-details.scss',
 })
