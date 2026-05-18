@@ -22,7 +22,15 @@ h1 {
     height: 100%;
     // aspect-ratio: 1240/ 486;
 
-    background-image: url("/images/Category-B-Image.png");
+    background-image:
+      linear-gradient(
+        to bottom,
+        // bottom → top
+        rgba(37, 37, 37, 0.32),
+        // at bottom: semi‑transparent
+        rgba(37, 37, 37, 1) // at top: fully opaque dark gray
+      ),
+      url("/images/Category-B-Image.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
