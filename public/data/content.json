@@ -105,6 +105,7 @@
   "services": {
     "title": "Services",
     "sendRequestBtn": "Send Request",
+    "price": "Price",
     "pricingDetails": "Pricing Details",
 
     "servicesDetails": [
@@ -115,7 +116,7 @@
         "detailedContentTitle": "Personalized Driving Lessons for Every Level",
         "detailedContent": "Whether you are a complete beginner or already have some experience, our instructors adapt each lesson to your pace and learning style.\nYou will learn parking, maneuvering, city driving, highway driving, hazard awareness, and exam-relevant techniques.\nWe prioritize calm instruction, modern teaching methods, and clear feedback so that your progress feels consistent and stress-free.\nAutomatic and manual cars are available.",
         "defaultPrice": "100.00 CHF",
-        "discountedPrice": "",
+        "discountedPrice": "100.60 CHF",
         "pricingDetailsDescription": "Lessons are billed per session. A package of 10 lessons includes the 11th lesson for free. Payment can be made per lesson or in advance for the discounted package.",
         "imagePath": "/images/Category-B-Image.png",
 

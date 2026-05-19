@@ -18,4 +18,26 @@
   <p>{{service.detailedContent}}</p>
 </section>
 
+<section class="pricing-details">
+  <div class="pricing-card">
+    <div class="pricing-card__title">{{servicesData.pricingDetails}}</div>
+
+    <div class="pricing-card__description">
+      {{service.pricingDetailsDescription}}
+    </div>
+
+    <div class="price-box">
+      <div class="price-box__label">{{servicesData.price}}</div>
+
+      <div class="price-box__prices">
+        @if (service.discountedPrice !== '') {
+        <span class="discounted-price">{{service.discountedPrice}}</span>
+        }
+
+        <span class="default-price">{{service.defaultPrice}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <img src="/images/shapes/net-background.svg" class="net-background" />
