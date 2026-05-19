@@ -20,6 +20,7 @@ export class ServiceDetails implements OnInit {
 
   service: any;
   servicesData: any;
+  bgStyle: any;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -40,6 +41,7 @@ export class ServiceDetails implements OnInit {
 
       if (service) {
         this.service = service;
+        this.bgStyle = `linear-gradient(to bottom,rgba(37, 37, 37, 0.32),rgba(37, 37, 37, 1)), url("${this.service.imagePath}")`;
 
         const currentPath = this.router.url.split('?')[0];
 
@@ -53,8 +55,8 @@ export class ServiceDetails implements OnInit {
 
         this.seoService.updatePageMetaData({
           ...seoData,
-          absoluteUrl,
-          absoluteImageUrl,
+          url: absoluteUrl,
+          image: absoluteImageUrl,
         });
       }
     });
