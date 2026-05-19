@@ -22,15 +22,6 @@ h1 {
     height: 100%;
     // aspect-ratio: 1240/ 486;
 
-    // background-image:
-    //   linear-gradient(
-    //     to bottom,
-    //     // bottom → top
-    //     rgba(37, 37, 37, 0.32),
-    //     // at bottom: semi‑transparent
-    //     rgba(37, 37, 37, 1) // at top: fully opaque dark gray
-    //   ),
-    //   url("/images/Category-B-Image.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -50,17 +41,19 @@ h1 {
     place-self: center; // center vertically and horizontally
     text-align: center;
     z-index: 1;
+    width: 70%;
 
     .title {
       color: white;
-      text-align: center;
       font-size: 4rem;
       margin: 0;
+      line-height: 100%;
+      width: 90%;
+      justify-self: center;
     }
 
     .description {
       color: var(--color-off-white);
-      text-align: center;
       font-size: 1.2rem;
     }
   }
