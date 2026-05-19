@@ -64,6 +64,16 @@ h1 {
       font-size: 1.2rem;
     }
   }
+
+  .send-request-btn {
+    align-self: end;
+    width: fit-content;
+    margin-bottom: 2.5rem;
+    width: 32%;
+
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .info {

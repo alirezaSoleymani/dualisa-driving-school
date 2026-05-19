@@ -18,7 +18,8 @@ export class ServiceDetails implements OnInit {
   router = inject(Router);
   seoService = inject(SeoService);
 
-  content: any;
+  service: any;
+  servicesData: any;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -31,12 +32,14 @@ export class ServiceDetails implements OnInit {
 
   loadService(id: string) {
     this.contentService.getContent('services').subscribe((data) => {
+      this.servicesData = data;
+
       const service = data.servicesDetails.find(
         (service: Service) => service.id === id,
       );
 
       if (service) {
-        this.content = service;
+        this.service = service;
 
         const currentPath = this.router.url.split('?')[0];
 

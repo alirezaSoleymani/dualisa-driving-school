@@ -104,6 +104,8 @@
   },
   "services": {
     "title": "Services",
+    "sendRequestBtn": "Send Request",
+    "pricingDetails": "Pricing Details",
 
     "servicesDetails": [
       {
