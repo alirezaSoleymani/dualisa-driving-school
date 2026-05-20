@@ -84,6 +84,68 @@ h1 {
   }
 }
 
+.pricing-details {
+  margin: 14rem 0;
+
+  .pricing-card {
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 15.8px 0px rgba(0, 0, 0, 0.09);
+
+    padding: 4rem;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &__description {
+      color: var(--color-medium-gray);
+      font-size: 1.25rem;
+
+      margin-top: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .price-box {
+      background: var(--color-off-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 1.5rem;
+
+      &__label {
+        font-size: 1.25rem;
+      }
+
+      .discounted-price {
+        font-size: 2rem;
+        color: var(--color-medium-gray);
+        // text-decoration: line-through;
+        margin-right: 1rem;
+
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0.53em;
+          // width: 100%;
+          background-color: currentColor;
+          height: 0.05em;
+          // opacity: 0.7; // optional: make it slightly subtle
+        }
+      }
+
+      .default-price {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
 .net-background {
   position: absolute;
   top: 30rem;
