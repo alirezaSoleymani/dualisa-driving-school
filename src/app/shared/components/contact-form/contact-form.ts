@@ -37,6 +37,7 @@ export class ContactForm implements OnInit {
 
   headline = input('');
   subheadline = input('');
+  modalMode = input(false);
 
   contactForm = new FormGroup(
     {
