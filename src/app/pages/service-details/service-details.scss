@@ -119,9 +119,7 @@ h1 {
       .discounted-price {
         font-size: 2rem;
         color: var(--color-medium-gray);
-        // text-decoration: line-through;
         margin-right: 1rem;
-
         position: relative;
 
         &::after {
@@ -129,11 +127,9 @@ h1 {
           position: absolute;
           left: 0;
           right: 0;
-          bottom: 0.53em;
-          // width: 100%;
+          bottom: 0.55em;
           background-color: currentColor;
-          height: 0.05em;
-          // opacity: 0.7; // optional: make it slightly subtle
+          height: 0.075em;
         }
       }
 
@@ -158,18 +154,16 @@ h1 {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.95);
   width: 35%;
-  // max-width: 600px; // never wider than 90% of viewport width
-  // min-width: 300px; // optional: prevent too narrow
   height: auto;
-  // max-height: 90vh; // never taller than 90% of viewport height
-  // overflow-y: auto; // scroll if content too tall
   background: white;
   border-radius: 2rem;
   padding: 1.1rem;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   pointer-events: none;
   z-index: 1001;
 
@@ -179,6 +173,7 @@ h1 {
   &.visible {
     opacity: 1;
     pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .close-btn {
