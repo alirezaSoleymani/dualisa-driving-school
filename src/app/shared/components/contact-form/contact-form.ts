@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ContentService } from '../../services/content/content-service';
 import {
   Component,
+  HostListener,
   inject,
   input,
   OnInit,
@@ -16,6 +17,7 @@ import {
   ReactiveFormsModule,
   ValidationErrors,
 } from '@angular/forms';
+import { ModalService } from '../../services/modal/modal-service';
 
 @Component({
   selector: 'app-contact-form',
@@ -26,6 +28,7 @@ import {
 export class ContactForm implements OnInit {
   contentService = inject<any>(ContentService);
   http = inject(HttpClient);
+  modalService = inject(ModalService);
 
   close = output();
 
@@ -96,5 +99,13 @@ export class ContactForm implements OnInit {
 
     this.submitted.set(false);
     this.close.emit(); // close modal
+  }
+
+  // Close modal with Esc key
+  @HostListener('window:keydown', ['$event'])
+  handleEscape(event: KeyboardEvent) {
+    if (event.key === 'Escape' && this.modalService.isModalOpen()) {
+      this.modalService.close();
+    }
   }
 }
