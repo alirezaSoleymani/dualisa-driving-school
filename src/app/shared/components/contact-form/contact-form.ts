@@ -1,14 +1,20 @@
 import { config } from './../../../../config';
 import { HttpClient } from '@angular/common/http';
 import { ContentService } from '../../services/content/content-service';
-import { Component, inject, input, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  inject,
+  input,
+  OnInit,
+  output,
+  signal,
+} from '@angular/core';
 import {
   AbstractControl,
   FormControl,
   FormGroup,
   ReactiveFormsModule,
   ValidationErrors,
-  Validators,
 } from '@angular/forms';
 
 @Component({
@@ -20,6 +26,8 @@ import {
 export class ContactForm implements OnInit {
   contentService = inject<any>(ContentService);
   http = inject(HttpClient);
+
+  close = output();
 
   content = signal<any>(null);
   submitted = signal(false);
@@ -87,5 +95,6 @@ export class ContactForm implements OnInit {
     });
 
     this.submitted.set(false);
+    this.close.emit(); // close modal
   }
 }

@@ -1,14 +1,16 @@
 import { Navbar } from './../../shared/components/navbar/navbar';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { ContentService } from '../../shared/services/content/content-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Service } from '../../shared/models/service.model';
 import { SeoService } from '../../shared/services/seo/seo-service';
 import { config } from '../../../config';
+import { ContactForm } from '../../shared/components/contact-form/contact-form';
+import { ModalService } from '../../shared/services/modal/modal-service';
 
 @Component({
   selector: 'app-service-details',
-  imports: [Navbar],
+  imports: [Navbar, ContactForm],
   templateUrl: './service-details.html',
   styleUrl: './service-details.scss',
 })
@@ -17,10 +19,13 @@ export class ServiceDetails implements OnInit {
   route = inject(ActivatedRoute);
   router = inject(Router);
   seoService = inject(SeoService);
+  modalService = inject(ModalService);
 
   service: any;
   servicesData: any;
   bgStyle: any;
+
+  // isModalOpen = signal(false);
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

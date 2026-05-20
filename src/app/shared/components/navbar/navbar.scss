@@ -133,22 +133,7 @@
   .hamburger-menu {
     display: none;
 
-    .menu-overlay {
-      position: fixed;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(7px);
-
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-
-      z-index: 1000;
-      &.open {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    }
+    //overlay class is global => styles.scss
 
     button {
       border: none;
