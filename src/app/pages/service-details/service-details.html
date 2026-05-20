@@ -50,5 +50,9 @@
 
 <div class="contact-form-modal" [class.visible]="modalService.isModalOpen()">
   <!-- <button class="close-btn" (click)="modalService.close()">✕</button> -->
-  <app-contact-form (close)="modalService.close()"></app-contact-form>
+  <app-contact-form
+    [headline]="servicesData.sendARequest"
+    [subheadline]="service.title"
+    (close)="modalService.close()"
+  ></app-contact-form>
 </div>

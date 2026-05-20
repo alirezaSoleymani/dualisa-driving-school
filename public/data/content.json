@@ -105,6 +105,7 @@
   "services": {
     "title": "Services",
     "sendRequestBtn": "Send Request",
+    "sendARequest": "Send A Request",
     "price": "Price",
     "pricingDetails": "Pricing Details",
 
