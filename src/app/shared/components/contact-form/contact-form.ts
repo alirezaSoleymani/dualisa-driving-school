@@ -91,6 +91,7 @@ export class ContactForm implements OnInit {
         this.contactForm.reset();
 
         (window as any).hcaptcha?.reset?.();
+        this.close.emit(); // close modal
       },
       error: () => {
         console.error('Failed to send email');
@@ -99,7 +100,6 @@ export class ContactForm implements OnInit {
     });
 
     this.submitted.set(false);
-    this.close.emit(); // close modal
   }
 
   // Close modal with Esc key
