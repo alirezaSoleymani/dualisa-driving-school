@@ -72,6 +72,10 @@ body {
   }
 }
 
+body.modal-open {
+  overflow: hidden; //scroll not allowed
+}
+
 @media (max-width: 1290px) {
   html {
     font-size: 85%;
