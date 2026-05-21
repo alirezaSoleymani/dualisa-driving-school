@@ -43,6 +43,16 @@ body {
 
   display: flex;
   justify-content: space-between;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+    transform: scale(1.005);
+  }
+
+  &:active {
+    transform: scale(0.995);
+  }
 }
 
 .overlay {
