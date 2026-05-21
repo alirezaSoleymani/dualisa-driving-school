@@ -31,6 +31,14 @@ export class App implements OnInit {
           this.updateSeoForCurrentRoute(fullContent);
         });
     });
+
+    //#region Sroll to top
+    this.router.events
+      .pipe(filter((e) => e instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0);
+      });
+    //#endregion
   }
 
   private updateSeoForCurrentRoute(fullContent: any) {
