@@ -15,7 +15,9 @@
       class="service-image"
       [style.background-image]="'url(' + service.imageCurvedPath +')'"
     >
-      <p class="service-title">{{service.title}}</p>
+      <p class="service-title" [routerLink]="['/services/' + service.id]">
+        {{service.title}}
+      </p>
     </div>
 
     <div class="service-description">{{service.description}}</div>
