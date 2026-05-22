@@ -6,13 +6,60 @@
 
 <section class="about">
   <div class="row-1">
-    <div class="grid-item">Text</div>
-    <div class="grid-item training-cars">Cars</div>
-    <div class="grid-item">Multilingual</div>
+    <div class="card card-text">
+      <div class="headline">
+        @for (part of content().about.text.headlineParts; track $index) {
+        <span [class.highlight]="part.class === 'highlight'"
+          >{{part.text}}</span
+        >
+        }
+      </div>
+
+      <div class="subheadline">{{content().about.text.subheadline}}</div>
+    </div>
+
+    <div class="card card-training-cars">
+      <img [src]="content().about.trainingCars.imagePath" />
+
+      <div class="headline">{{content().about.trainingCars.headline}}</div>
+
+      <div class="subheadline">
+        {{content().about.trainingCars.subheadline}}
+      </div>
+    </div>
+
+    <div class="card card-multilingual">
+      <img [src]="content().about.multilingual.imagePath" />
+
+      <div class="headline">{{content().about.multilingual.headline}}</div>
+
+      <div class="subheadline">
+        {{content().about.multilingual.subheadline}}
+      </div>
+    </div>
   </div>
 
   <div class="row-2">
-    <div class="grid-item">Eldelry</div>
-    <div class="grid-item">Automatic & Manual</div>
+    <div class="card card-special-programs">
+      <img [src]="content().about.specialPrograms.imagePath" />
+
+      <div class="text">
+        <div class="headline">{{content().about.specialPrograms.headline}}</div>
+
+        <div class="subheadline">
+          {{content().about.specialPrograms.subheadline}}
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-options">
+      <img [src]="content().about.options.imagePath" />
+
+      <div class="text">
+        <div class="headline">{{content().about.options.headline}}</div>
+
+        <div class="subheadline">{{content().about.options.subheadline}}</div>
+      </div>
+    </div>
   </div>
 </section>
