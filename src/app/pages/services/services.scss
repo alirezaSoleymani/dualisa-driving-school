@@ -13,17 +13,23 @@
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  // gap: 1rem;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  justify-content: center;
   width: 100%;
   margin-top: 4rem;
 
   .service-card {
     position: relative;
+    width: 100%;
+    max-width: 35rem;
+    justify-self: center;
 
     .service-image {
       position: relative;
-      height: 17rem;
+      width: 100%;
+      aspect-ratio: 397/265;
 
       background-size: contain;
       background-position: center;
@@ -72,6 +78,86 @@
   }
 
   .services .service-card .service-image .service-title {
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    width: 14rem;
+  }
+}
+
+@media (max-width: 1149px) {
+  .services {
+    .service-card {
+      .service-image {
+        margin-bottom: 2rem;
+
+        .service-title {
+          font-size: 1.3rem;
+          width: 16rem;
+        }
+      }
+      .service-description {
+        font-size: 1.12rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .services .service-card {
+    .service-image .service-title {
+      font-size: 1.2rem;
+    }
+    .service-description {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+@media (max-width: 737px) {
+  .services {
+    row-gap: 3rem;
+  }
+
+  .services .service-card {
+    .service-image .service-title {
+      font-size: 1.5rem;
+      width: 18rem;
+    }
+    .service-description {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    height: 17rem;
+
+    .content {
+      font-size: 3.8rem;
+    }
+  }
+
+  .services {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero {
+    height: 15rem;
+
+    .content {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    height: 12rem;
+
+    .content {
+      font-size: 3.2rem;
+    }
   }
 }
