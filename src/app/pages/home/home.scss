@@ -24,3 +24,30 @@
     text-align: center;
   }
 }
+
+.about {
+  .row-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .grid-item {
+      border: 1px solid red;
+    }
+
+    .training-cars {
+      grid-row: span 2;
+    }
+  }
+
+  .row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    .grid-item {
+      border: 1px solid red;
+    }
+  }
+}
