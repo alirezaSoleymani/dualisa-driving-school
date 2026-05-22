@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, HostListener, inject, OnInit, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ContentService } from '../../services/content/content-service';
 
@@ -39,5 +39,13 @@ export class Navbar implements OnInit {
     this.contentService.getContent('services').subscribe((data) => {
       this.dropdownContent = data.servicesDetails;
     });
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleEscape(event: KeyboardEvent) {
+    if (event.key === 'Escape' && this.isMenuOpen()) {
+      this.closeMenus(event);
+      event.preventDefault();
+    }
   }
 }

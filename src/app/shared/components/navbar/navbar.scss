@@ -154,6 +154,7 @@
       bottom: 0;
       right: 0;
       width: 30rem;
+      max-width: 60vw;
       background-color: var(--color-light-gray);
 
       z-index: 1001;
@@ -282,9 +283,15 @@
     }
   }
 
-  .hamburger-menu button img {
-    min-width: 2rem !important;
-    min-height: 2rem !important;
+  .hamburger-menu {
+    button img {
+      min-width: 2rem !important;
+      min-height: 2rem !important;
+    }
+
+    .menu .menu-items {
+      font-size: 1.2rem !important;
+    }
   }
 }
 
