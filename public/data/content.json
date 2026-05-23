@@ -43,7 +43,14 @@
       "multilingual": {
         "headline": "Multilingual Driving Instructors",
         "subheadline": "Drive with confidence from day one. We offer lessons in multiple languages so nothing gets lost in translation",
-        "imagePath": "/images/multilingual.png"
+        "imagePath": {
+          "albania": "/images/icons/albania.png",
+          "turkey": "/images/icons/turkey.png",
+          "unitedKingdom": "/images/icons/united-kingdom.png",
+          "germany": "/images/icons/germany.png",
+          "macedonia": "/images/icons/macedonia.png",
+          "serbia": "/images/icons/serbia.png"
+        }
       },
       "specialPrograms": {
         "headline": "Special Programs for Every Learner",

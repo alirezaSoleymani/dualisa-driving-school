@@ -55,6 +55,68 @@
       &-training-cars {
         grid-row: span 2;
       }
+
+      &-multilingual {
+        .flags-bg {
+          border-radius: 1.5rem;
+          background-color: rgba(241, 223, 209, 1);
+          position: relative;
+          overflow: hidden;
+
+          ::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(
+              transparent 60%,
+              var(--color-off-white) 170%
+            );
+
+            // box-shadow:
+            // inset 32px 0 32px -16px var(--color-off-white),
+            //   inset -32px 0 32px -16px var(--color-off-white),
+            //   inset 0 4px 8px -4px var(--color-off-white),
+            //   inset 0 -4px 8px -4px var(--color-off-white);
+
+            border-radius: 1.5rem;
+          }
+
+          .flags {
+            width: 103%;
+            height: 10.5rem;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-self: center;
+
+            .flag-box {
+              width: 4rem;
+              height: 4rem;
+              background: white;
+              border-radius: 0.5rem;
+
+              img {
+                width: 3rem;
+                height: 3rem;
+                margin-left: 12.5%;
+                margin-top: 12.5%;
+              }
+
+              &-1,
+              &-6 {
+                margin-top: -2.6rem;
+              }
+
+              &-3,
+              &-4 {
+                margin-top: 2.6rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

@@ -29,7 +29,33 @@
     </div>
 
     <div class="card card-multilingual">
-      <img [src]="content().about.multilingual.imagePath" />
+      <div class="flags-bg">
+        <div class="flags">
+          <div class="flag-box flag-box-1">
+            <img [src]="content().about.multilingual.imagePath.albania" />
+          </div>
+
+          <div class="flag-box flag-box-2">
+            <img [src]="content().about.multilingual.imagePath.turkey" />
+          </div>
+
+          <div class="flag-box flag-box-3">
+            <img [src]="content().about.multilingual.imagePath.unitedKingdom" />
+          </div>
+
+          <div class="flag-box flag-box-4">
+            <img [src]="content().about.multilingual.imagePath.germany" />
+          </div>
+
+          <div class="flag-box flag-box-5">
+            <img [src]="content().about.multilingual.imagePath.macedonia" />
+          </div>
+
+          <div class="flag-box flag-box-6">
+            <img [src]="content().about.multilingual.imagePath.serbia" />
+          </div>
+        </div>
+      </div>
 
       <div class="headline">{{content().about.multilingual.headline}}</div>
 
