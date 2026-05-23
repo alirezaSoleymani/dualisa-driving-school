@@ -33,16 +33,20 @@
           { "text": "Comfortable, Supportive Driving for ", "class": "" },
           { "text": "Everybody", "class": "highlight" }
         ],
+
         "subheadline": "Detail Oriented Driving Courses for Everybody"
       },
+
       "trainingCars": {
         "headline": "Premium, Modern Training Cars",
         "subheadline": "Experience smooth, safe learning in our modern driving-school vehicles equipped with the latest technology",
         "imagePath": "/images/training-cars.svg"
       },
+
       "multilingual": {
         "headline": "Multilingual Driving Instructors",
         "subheadline": "Drive with confidence from day one. We offer lessons in multiple languages so nothing gets lost in translation",
+
         "imagePath": {
           "albania": "/images/icons/albania.png",
           "turkey": "/images/icons/turkey.png",
@@ -52,15 +56,17 @@
           "serbia": "/images/icons/serbia.png"
         }
       },
+
       "specialPrograms": {
         "headline": "Special Programs for Every Learner",
         "subheadline": "From seniors to anxious first-timers, our instructors provide patient and personalized guidance to help you feel fully at ease",
         "imagePath": "/images/special-programs.svg"
       },
+
       "options": {
         "headline": "Automatic & Manual Options",
         "subheadline": "Your license, your choice. Learn on automatic or manual — whichever suits your goals best",
-        "imagePath": "/images/options.svg"
+        "imagePath": "/images/icons/gear-stick.svg"
       }
     },
 

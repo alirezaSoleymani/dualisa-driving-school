@@ -79,7 +79,11 @@
     </div>
 
     <div class="card card-options">
-      <img [src]="content().about.options.imagePath" />
+      <div class="outer-icon-container">
+        <div class="icon-container">
+          <img [src]="content().about.options.imagePath" />
+        </div>
+      </div>
 
       <div class="text">
         <div class="headline">{{content().about.options.headline}}</div>
