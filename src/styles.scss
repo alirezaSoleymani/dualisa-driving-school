@@ -1,4 +1,4 @@
-@import "@fontsource/afacad-flux";
+@import "@fontsource-variable/afacad-flux";
 
 body {
   margin: 0;
@@ -22,7 +22,7 @@ body {
   --color-danger: #e74c3c;
 
   //Typography
-  --font-primary: "Afacad Flux", sans-serif;
+  --font-primary: "Afacad Flux Variable", "Afacad Flux", sans-serif;
 
   //
   --navbar-height: 5.3rem;

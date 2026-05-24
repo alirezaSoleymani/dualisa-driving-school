@@ -25,6 +25,7 @@
 
     color: white;
     font-size: 4rem;
+    font-weight: 600;
   }
 }
 
@@ -39,7 +40,7 @@
     padding-left: 0.7rem;
     .headline {
       font-size: 3rem;
-
+      font-weight: 500;
       .highlight {
         color: var(--color-primary);
       }
@@ -58,7 +59,7 @@
       font-size: 1.2rem;
 
       .title {
-        font-weight: bold;
+        font-weight: 600;
         margin-bottom: 0.3rem;
       }
 
