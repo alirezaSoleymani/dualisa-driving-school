@@ -73,7 +73,8 @@
     "continueCta": {
       "headline": "Continue your journey from where you left",
       "subheadline": "Detail Oriented Driving Courses for Everybody",
-      "btnText": "Send A Request"
+      "btnText": "Send A Request",
+      "modalHeadline":"Send A Request"
     },
 
     "seo": {

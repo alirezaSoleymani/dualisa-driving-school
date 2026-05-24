@@ -211,8 +211,30 @@
     <div class="subheadline">{{content().continueCta.subheadline}}</div>
   </div>
 
-  <div class="send-request-btn">
+  <button class="send-request-btn" (click)="modalService.open()">
     <div class="btn-text">{{content().continueCta.btnText}}</div>
     <div class="icon">>>></div>
+  </button>
+
+  <div class="modal">
+    <div
+      class="overlay"
+      [class.visible]="modalService.isModalOpen()"
+      (click)="modalService.close()"
+    ></div>
+
+    <div
+      class="contact-form-modal"
+      [class.visible]="modalService.isModalOpen()"
+    >
+      <button class="close-btn" (click)="modalService.close()">
+        <img src="/images/icons/close.svg" alt="" />
+      </button>
+      <app-contact-form
+        [headline]="content().continueCta.modalHeadline"
+        [modalMode]="true"
+        (close)="modalService.close()"
+      ></app-contact-form>
+    </div>
   </div>
 </section>
