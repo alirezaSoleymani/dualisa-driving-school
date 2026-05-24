@@ -70,6 +70,12 @@
       }
     },
 
+    "continueCta": {
+      "headline": "Continue your journey from where you left",
+      "subheadline": "Detail Oriented Driving Courses for Everybody",
+      "btnText": "Send A Request"
+    },
+
     "seo": {
       "title": "Home | Dualisa Driving School - Your Partner for the Swiss Driving License",
       "description": "Professional driving school in Bern offering patient instructors, modern cars, and flexible lessons. Start your journey to a stress-free driving license today.",
