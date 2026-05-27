@@ -33,6 +33,9 @@
   background-image: url("/images/shapes/net-background.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
 
   .heading {
     font-size: 2.5rem;
@@ -55,7 +58,7 @@
     width: 45rem;
     // padding: 0 6rem;
     margin-bottom: 5rem;
-    margin-left: 5rem;
+    padding: 0 5rem;
 
     .heading {
       font-size: 2.7rem;
@@ -80,9 +83,12 @@
 
     swiper-container {
       width: 100%;
-      height: 30rem;
+      // height: 30rem;
 
       swiper-slide {
+        aspect-ratio: 65 / 42; //very good choice for responsivity
+
+        position: relative;
         width: 60% !important;
         height: 100%;
         overflow: hidden;
@@ -93,9 +99,24 @@
         transform-origin: center center;
 
         img {
+          display: block;
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0; 
+          background: linear-gradient(
+            360deg,
+            rgba(37, 37, 37, 0.56) 0%,
+            rgba(37, 37, 37, 0) 100%
+          );
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.4s ease;
         }
 
         &:not(.swiper-slide-active) {
@@ -118,6 +139,10 @@
           opacity: 1;
           border-radius: 2.5rem;
           z-index: 2;
+
+          &::after {
+            opacity: 1;
+          }
         }
       }
     }
@@ -172,6 +197,227 @@
       left: 0;
       right: 0;
       z-index: 2;
+    }
+  }
+
+  .cars .text-wrapper {
+    width: auto;
+  }
+}
+
+@media (max-width: 1170px) {
+  .intro {
+    padding: 7rem 13rem;
+  }
+
+  .cars .slider-wrapper {
+    .next-btn {
+      right: 9rem;
+    }
+    .prev-btn {
+      left: 9rem;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .hero {
+    height: 23rem;
+  }
+
+  .intro {
+    padding: 5.5rem 8.5rem;
+  }
+
+  .cars .slider-wrapper {
+    .next-btn {
+      right: 6rem;
+    }
+    .prev-btn {
+      left: 6rem;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .hero {
+    height: 19rem;
+
+    .content {
+      font-size: 3.5rem;
+    }
+  }
+
+  .intro {
+    padding: 4.5rem 6rem;
+
+    .heading {
+      font-size: 2rem;
+    }
+    .description {
+      font-size: 1.1rem;
+    }
+  }
+
+  .cars {
+    padding-top: 4rem;
+
+    .text-wrapper {
+      padding: 0 2.5rem;
+      margin-bottom: 4rem;
+
+      .heading {
+        font-size: 2.1rem;
+      }
+      .description {
+        font-size: 1.1rem;
+      }
+    }
+
+    .slider-wrapper {
+      .next-btn {
+        right: 4rem;
+      }
+      .prev-btn {
+        left: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 16rem;
+
+    .content {
+      font-size: 3.3rem;
+    }
+  }
+
+  .intro {
+    padding: 3.5rem 4.5rem;
+    gap: 0.8rem;
+    .heading {
+      font-size: 1.7rem;
+    }
+    .description {
+      font-size: 1rem;
+    }
+  }
+
+  .cars {
+    padding: 3rem 0;
+
+    .text-wrapper {
+      padding: 0 2.5rem;
+      margin-bottom: 4rem;
+
+      .heading {
+        font-size: 1.9rem;
+      }
+      .description {
+        font-size: 1rem;
+      }
+    }
+
+    .slider-wrapper {
+      swiper-container swiper-slide.swiper-slide-active {
+        border-radius: 2rem;
+      }
+
+      .prev-btn,
+      .next-btn {
+        width: 2.7rem;
+        height: 2.7rem;
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .next-btn {
+        right: 2.5rem;
+      }
+      .prev-btn {
+        left: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    height: 14rem;
+
+    .content {
+      font-size: 3rem;
+    }
+  }
+
+  .intro {
+    padding: 3rem 3rem;
+  }
+
+  .slider-wrapper swiper-container swiper-slide.swiper-slide-active {
+    border-radius: 1.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    height: 12rem;
+
+    .content {
+      font-size: 2.5rem;
+    }
+  }
+
+  .intro {
+    padding: 3rem 2rem;
+    gap: 0.7rem;
+    .heading {
+      font-size: 1.5rem;
+    }
+    .description {
+      font-size: 0.8rem;
+    }
+  }
+
+  .cars {
+    padding: 3rem 0;
+
+    .text-wrapper {
+      padding: 0 1.5rem;
+      margin-bottom: 2.7rem;
+
+      .heading {
+        font-size: 1.5rem;
+      }
+      .description {
+        font-size: 0.8rem;
+      }
+    }
+
+    .slider-wrapper {
+      swiper-container swiper-slide.swiper-slide-active {
+        border-radius: 1.4rem;
+      }
+      .prev-btn,
+      .next-btn {
+        width: 2.4rem;
+        height: 2.4rem;
+        img {
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+
+      .next-btn {
+        right: 1.5rem;
+      }
+      .prev-btn {
+        left: 1.5rem;
+      }
     }
   }
 }
