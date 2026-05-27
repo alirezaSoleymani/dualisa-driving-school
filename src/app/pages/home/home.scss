@@ -73,9 +73,11 @@
             inset: 0;
             pointer-events: none;
             background: radial-gradient(
-              transparent 60%,
-              var(--color-off-white) 170%
+              60% 60% at 50% 50%,
+              rgba(250, 250, 250, 0) 65%,
+              rgba(241, 241, 241, .15) 100%
             );
+
             border-radius: 1.5rem;
           }
 
