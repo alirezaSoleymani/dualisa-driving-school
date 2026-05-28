@@ -36,22 +36,25 @@
   .content {
     place-self: center; // center vertically and horizontally
     text-align: center;
+    text-wrap: balance;
     z-index: 1;
-    width: 70%;
+    width: 85%;
 
     .title {
       color: white;
-      font-size: 4rem;
+      // font-size: 4rem;
+      font-size: clamp(1.5rem, 4.5vw, 4rem);
       font-weight: 600;
       margin: 0;
-      line-height: 100%;
+      line-height: 1.05;
       width: 90%;
       justify-self: center;
     }
 
     .description {
       color: var(--color-off-white);
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
+      font-size: clamp(0.5rem, 2vw, 1.2rem);
     }
   }
 
@@ -63,44 +66,55 @@
 
     display: flex;
     justify-content: space-between;
+
+    font-size: clamp(0.5rem, 2vw, 1.2rem);
   }
 }
 
 .info {
+  box-sizing: border-box;
   position: relative;
   white-space: pre-line;
+  width: 100%;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
 
   h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
     font-weight: 600;
     margin: 0;
+    line-height: 1.1;
   }
 
   p {
     color: var(--color-medium-gray);
-    font-size: 1.25rem;
+    font-size: clamp(0.98rem, 1.8vw, 1.25rem);
+    margin: 0;
   }
 }
 
 .pricing-details {
-  margin-bottom: 8rem;
-  margin-top: 14rem;
+  margin-top: clamp(12rem, 20vw, 18rem);
+  margin-bottom: clamp(8rem, 14vw, 12rem);
 
   .pricing-card {
     background-color: white;
-    border-radius: 2rem;
+    border-radius: clamp(1.35rem, 2.5vw, 2rem);
     box-shadow: 0px 4px 15.8px 0px rgba(0, 0, 0, 0.09);
 
-    padding: 4rem;
+    padding: clamp(2rem, 5vw, 4rem);
 
     &__title {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 2.6vw, 2rem);
       font-weight: 600;
+      line-height: 1.15;
     }
 
     &__description {
       color: var(--color-medium-gray);
-      font-size: 1.25rem;
+      font-size: clamp(0.98rem, 1.8vw, 1.25rem);
+      line-height: 1.6;
 
       margin-top: 1.25rem;
       margin-bottom: 2rem;
@@ -108,15 +122,15 @@
 
     .price-box {
       background: var(--color-off-white);
-      padding: 0.75rem 1.5rem;
-      border-radius: 1.5rem;
+      padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1rem, 2.5vw, 1.5rem);
+      border-radius: clamp(1rem, 2vw, 1.5rem);
 
       &__label {
-        font-size: 1.25rem;
+        font-size: clamp(0.98rem, 1.8vw, 1.25rem);
       }
 
       .discounted-price {
-        font-size: 2rem;
+        font-size: clamp(1.45rem, 2.6vw, 2rem);
         color: var(--color-medium-gray);
         margin-right: 1rem;
         position: relative;
@@ -133,9 +147,10 @@
       }
 
       .default-price {
-        font-size: 3rem;
+        font-size: clamp(2rem, 4vw, 3rem);
         font-weight: 700;
         color: var(--color-primary);
+        line-height: 1.05;
       }
     }
   }
@@ -145,6 +160,8 @@
   position: absolute;
   top: 30rem;
   left: 15rem;
+  width: calc(100% - 15rem);
+  // aspect-ratio: 960/573;
 
   z-index: -2;
 }
@@ -181,5 +198,266 @@
     cursor: pointer;
     align-self: flex-end;
     padding: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero .content .description {
+    margin-top: 0.3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero .send-request-btn {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .net-background {
+    top: 25rem;
+  }
+
+  .hero {
+    .content {
+      margin-top: -1.5rem;
+    }
+
+    .send-request-btn {
+      margin-bottom: 1.8rem;
+      padding: 1.2rem 1.9rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .net-background {
+    top: 22rem;
+    left: 10rem;
+    width: calc(100% - 10rem);
+  }
+
+  .hero {
+    .send-request-btn {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    .send-request-btn {
+      padding: 1rem 1.7rem;
+      margin-bottom: 1.5rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .info {
+    padding-inline: 1.5rem;
+    gap: 1rem;
+
+    h2 {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.65;
+      max-width: 100%;
+    }
+  }
+
+  .pricing-details {
+    margin-top: clamp(10rem, 25vw, 13.5rem);
+    margin-bottom: clamp(7rem, 17vw, 9rem);
+
+    .pricing-card {
+      .price-box {
+        &__label {
+          font-size: 1rem;
+        }
+
+        .discounted-price {
+          font-size: 1.5rem;
+        }
+        .default-price {
+          font-size: 2.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    .send-request-btn {
+      padding: 0.9rem 1.6rem;
+      margin-bottom: 1.4rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  .pricing-details {
+    margin-top: clamp(9rem, 24vw, 11rem);
+    margin-bottom: clamp(6.25rem, 15vw, 7.75rem);
+
+    .pricing-card {
+      &__title {
+        font-size: 1.4rem;
+      }
+
+      &__description {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .pricing-details {
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+
+    .pricing-card {
+      padding: clamp(1.7rem, 6vw, 2.3rem);
+
+      &__title {
+        font-size: 1.25rem;
+      }
+
+      &__description {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .price-box {
+        &__label {
+          font-size: 0.9rem;
+        }
+
+        .discounted-price {
+          font-size: 1.25rem;
+        }
+
+        .default-price {
+          font-size: 1.85rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .pricing-details {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+
+    .pricing-card {
+      padding: clamp(1.4rem, 5.5vw, 1.9rem);
+
+      &__title {
+        font-size: 1.15rem;
+      }
+
+      &__description {
+        font-size: 0.85rem;
+      }
+
+      .price-box {
+        &__label {
+          font-size: 0.85rem;
+        }
+
+        .discounted-price {
+          font-size: 1.15rem;
+        }
+
+        .default-price {
+          font-size: 1.65rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    .send-request-btn {
+      padding: 0.7rem 1.3rem;
+      margin-bottom: 1.1rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .info {
+    padding-inline: 1rem;
+
+    h2 {
+      font-size: clamp(1.35rem, 3.5vw, 1.8rem);
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    .content {
+      margin-top: -1rem;
+
+      .title {
+        font-size: 1.3rem;
+      }
+    }
+
+    .send-request-btn {
+      padding: 0.5rem 1.1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.8rem;
+    }
+  }
+
+  .info {
+    gap: 0.7rem;
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    .content {
+      margin-top: -0.4rem;
+
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .send-request-btn {
+      padding: 0.4rem 1rem;
+      margin-bottom: 0.8rem;
+      border-radius: 0.6rem;
+    }
+  }
+
+  .info {
+    h2 {
+      font-size: 1.15rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.55;
+    }
   }
 }
