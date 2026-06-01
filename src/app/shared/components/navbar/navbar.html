@@ -21,7 +21,7 @@
     </svg>
 
     <!-- Nav Items -->
-    @for (item of content().menu; track $index) {
+    @for (item of content(); track $index) {
     <div class="nav-item" [class.has-dropdown]="item.children">
       <a
         [routerLink]="item.route"
@@ -39,9 +39,9 @@
 
       @if ( item.children ) {
       <ul class="dropdown">
-        @for (service of item.children; track $index) {
-        <li [routerLink]="[item.route, service.id]" class="dropdown-item">
-          {{service.title}}
+        @for (subItem of item.children; track $index) {
+        <li [routerLink]="[item.route, subItem.id]" class="dropdown-item">
+          {{subItem.title}}
         </li>
         }
       </ul>

@@ -1,37 +1,34 @@
 {
-  "navbar": {
-    "menu": [
-      {
-        "title": "Home",
-        "route": "/"
-      },
-      {
-        "title": "Services",
-        "route": "/services",
-        "children": [
-          { "id": "category-b", "title": "Category B Driving Lessons" },
-          { "id": "first-aid", "title": "First Aid Course" },
-          { "id": "theory-test", "title": "Theory Test Preparation Course" },
-          { "id": "traffic-study", "title": "Traffic Study Course (VKU)" },
-          { "id": "completion-course", "title": "Completion Course (WAB)" },
-          {
-            "id": "special-programs",
-            "title": "Special Programs for Seniors and Anxious Learners"
-          }
-        ]
-      },
-      {
-        "title": "About Us",
-        "route": "/about-us"
-      },
-      {
-        "title": "Contact Us",
-        "route": "/contact-us"
-      }
-    ],
+  "navbar": [
+    {
+      "title": "Home",
+      "route": "/"
+    },
+    {
+      "title": "Services",
+      "route": "/services",
+      "children": [
+        { "id": "category-b", "title": "Category B Driving Lessons" },
+        { "id": "first-aid", "title": "First Aid Course" },
+        { "id": "theory-test", "title": "Theory Test Preparation Course" },
+        { "id": "traffic-study", "title": "Traffic Study Course (VKU)" },
+        { "id": "completion-course", "title": "Completion Course (WAB)" },
+        {
+          "id": "special-programs",
+          "title": "Special Programs for Seniors and Anxious Learners"
+        }
+      ]
+    },
+    {
+      "title": "About Us",
+      "route": "/about-us"
+    },
+    {
+      "title": "Contact Us",
+      "route": "/contact-us"
+    }
+  ],
 
-    "allServices": "All Services"
-  },
   "home": {
     "intro": {
       "heading": "Your Trusted Partner on the Road to Your License",

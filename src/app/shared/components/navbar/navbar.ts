@@ -22,7 +22,7 @@ import { IMenu } from '../../models/menu.model';
 })
 export class Navbar implements OnInit, AfterViewInit {
   contentService = inject(ContentService);
-  content = signal<any>(null);
+  content = signal<IMenu[]>([]);
 
   private el = inject(ElementRef);
   private threshold = 0;
