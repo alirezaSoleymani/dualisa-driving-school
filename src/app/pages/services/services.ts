@@ -1,11 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
-import { Navbar } from '../../shared/components/navbar/navbar';
 import { ContentService } from '../../shared/services/content/content-service';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-services',
-  imports: [Navbar, RouterLink],
+  imports: [RouterLink],
   templateUrl: './services.html',
   styleUrl: './services.scss',
 })

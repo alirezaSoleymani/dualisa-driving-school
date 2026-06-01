@@ -1,4 +1,3 @@
-import { Navbar } from './../../shared/components/navbar/navbar';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { ContentService } from '../../shared/services/content/content-service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -10,7 +9,7 @@ import { ModalService } from '../../shared/services/modal/modal-service';
 
 @Component({
   selector: 'app-service-details',
-  imports: [Navbar, ContactForm],
+  imports: [ContactForm],
   templateUrl: './service-details.html',
   styleUrl: './service-details.scss',
 })

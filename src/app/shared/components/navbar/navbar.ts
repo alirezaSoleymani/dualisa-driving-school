@@ -1,20 +1,35 @@
-import { Component, HostListener, inject, OnInit, signal } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  inject,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ContentService } from '../../services/content/content-service';
+import { IMenu } from '../../models/menu.model';
 
 @Component({
   selector: 'app-navbar',
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
+  host: {
+    '[class.scrolled]': 'scrolled()',
+  },
 })
-export class Navbar implements OnInit {
+export class Navbar implements OnInit, AfterViewInit {
   contentService = inject(ContentService);
   content = signal<any>(null);
-  dropdownContent: any;
+
+  private el = inject(ElementRef);
+  private threshold = 0;
 
   isMenuOpen = signal(false);
   isSubmenuOpen = signal(false);
+  scrolled = signal(false);
 
   openMenu(event: Event) {
     event.preventDefault();
@@ -35,10 +50,12 @@ export class Navbar implements OnInit {
     this.contentService.getContent('navbar').subscribe((data) => {
       this.content.set(data);
     });
+  }
 
-    this.contentService.getContent('services').subscribe((data) => {
-      this.dropdownContent = data.servicesDetails;
-    });
+  ngAfterViewInit(): void {
+    this.updateThreshold();
+
+    window.addEventListener('resize', () => this.updateThreshold());
   }
 
   @HostListener('window:keydown', ['$event'])
@@ -47,5 +64,21 @@ export class Navbar implements OnInit {
       this.closeMenus(event);
       event.preventDefault();
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const newScrolled = window.scrollY >= this.threshold;
+
+    if (newScrolled !== this.scrolled()) {
+      this.scrolled.set(newScrolled);
+    }
+  }
+
+  updateThreshold() {
+    const navbar = this.el.nativeElement;
+    const rect = navbar.getBoundingClientRect();
+
+    this.threshold = rect.bottom + window.scrollY;
   }
 }

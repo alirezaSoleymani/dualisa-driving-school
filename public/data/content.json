@@ -1,13 +1,24 @@
 {
   "navbar": {
-    "items": [
+    "menu": [
       {
         "title": "Home",
         "route": "/"
       },
       {
         "title": "Services",
-        "route": "/services"
+        "route": "/services",
+        "children": [
+          { "id": "category-b", "title": "Category B Driving Lessons" },
+          { "id": "first-aid", "title": "First Aid Course" },
+          { "id": "theory-test", "title": "Theory Test Preparation Course" },
+          { "id": "traffic-study", "title": "Traffic Study Course (VKU)" },
+          { "id": "completion-course", "title": "Completion Course (WAB)" },
+          {
+            "id": "special-programs",
+            "title": "Special Programs for Seniors and Anxious Learners"
+          }
+        ]
       },
       {
         "title": "About Us",
@@ -74,7 +85,7 @@
       "headline": "Continue your journey from where you left",
       "subheadline": "Detail Oriented Driving Courses for Everybody",
       "btnText": "Send A Request",
-      "modalHeadline":"Send A Request"
+      "modalHeadline": "Send A Request"
     },
 
     "seo": {
@@ -299,7 +310,9 @@
     "errorMessage": "*Please register at least one valid form of communication so we can get in touch with you.",
     "submitBtn": "Send Request"
   },
-  "notFound": {},
+  "notFound": {
+    "notFoundMessage": "404 Not Found"
+  },
   "footer": {
     "links": {
       "home": "Home",

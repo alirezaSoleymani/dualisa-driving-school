@@ -1,6 +1,7 @@
 @if(content()){
 
 <section class="hero">
+  <!-- Background Shape -->
   <svg
     class="hero-bg-shape"
     viewBox="0 0 1240 395"
@@ -12,10 +13,6 @@
       fill="#333333"
     />
   </svg>
-
-  <div class="navbar-container">
-    <app-navbar></app-navbar>
-  </div>
 
   <div class="content">
     <p>{{content().title}}</p>
@@ -97,7 +94,7 @@
 </section>
 
 <section class="map">
-  <!-- <google-map
+  <google-map
     [center]="center"
     [zoom]="zoom"
     width="100%"
@@ -106,7 +103,7 @@
   >
     <map-marker [position]="markerPosition" [options]="mapMarkerOptions">
     </map-marker>
-  </google-map> -->
+  </google-map>
 </section>
 
 <div class="net-background">

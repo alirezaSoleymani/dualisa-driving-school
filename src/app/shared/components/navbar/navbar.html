@@ -1,5 +1,10 @@
 <div class="header-container">
-  <img src="/images/logos/logo-1.svg" alt="Dualisa-Logo" class="logo" />
+  <img
+    src="/images/logos/logo-1.svg"
+    alt="Dualisa-Logo"
+    class="logo"
+    routerLink="/"
+  />
 
   <nav>
     @if(content()){
@@ -16,40 +21,33 @@
     </svg>
 
     <!-- Nav Items -->
-    @for (item of content().items; track $index) { @if (item.title !==
-    "Services") {
-    <a
-      [routerLink]="item.route"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      {{ item.title }}
-    </a>
-    } @else {
-    <div class="services">
+    @for (item of content().menu; track $index) {
+    <div class="nav-item" [class.has-dropdown]="item.children">
       <a
         [routerLink]="item.route"
         routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: false }"
+        [routerLinkActiveOptions]="{ exact: item.children ? false : true }"
       >
-        <div class="content">{{ item.title }}</div>
-        <img
-          src="/images/icons/chevron-down.svg"
-          alt="chevron-down"
-          class="chevron-icon"
-        />
+        <span class="title">{{ item.title }}</span>
+
+        @if(item.children){
+        <span class="chevron-icon">
+          <img src="/images/icons/chevron-down.svg" />
+        </span>
+        }
       </a>
 
+      @if ( item.children ) {
       <ul class="dropdown">
-        @for (service of dropdownContent; track $index) {
-        <li class="service" [routerLink]="['/services', service.id]">
+        @for (service of item.children; track $index) {
+        <li [routerLink]="[item.route, service.id]" class="dropdown-item">
           {{service.title}}
         </li>
         }
       </ul>
+      }
     </div>
-
-    } }}
+    } }
   </nav>
 
   <div class="social-media">
@@ -64,7 +62,7 @@
     </button>
   </div>
 
-  <div class="hamburger-menu">
+  <!-- <div class="hamburger-menu">
     <button>
       <img src="/images/icons/hamburger-menu.svg" (click)="openMenu($event)" />
     </button>
@@ -77,7 +75,7 @@
 
     <div class="menu" [class.open]="isMenuOpen()">
       <div class="menu-items">
-        @for (item of content().items; track $index) { @if (item.title !==
+        @for (item of content().menu; track $index) { @if (item.title !==
         "Services") {
         <a [routerLink]="item.route" (click)="closeMenus($event)"
           >{{ item.title }}
@@ -110,12 +108,12 @@
             (click)="closeMenus($event)"
             >{{content().allServices}}</a
           >
-          @for (service of dropdownContent; track $index) {
+          @for (subItem of item.children; track $index) {
           <a
             class="submenu-item"
-            [routerLink]="['/services', service.id]"
+            [routerLink]="['/services', subItem.id]"
             (click)="closeMenus($event)"
-            >{{service.title}}</a
+            >{{subItem.title}}</a
           >
           }
         </div>
@@ -123,5 +121,5 @@
         }}
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

@@ -1,3 +1,32 @@
+:host {
+  position: absolute;
+  top: var(--page-top-padding);
+  z-index: 1000;
+  width: calc(100% - 2 * var(--page-side-padding));
+  box-sizing: border-box;
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    nav .bg-shape {
+      filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.08));
+    }
+
+    .header-container .logo,
+    .header-container .social-media {
+      display: none;
+    }
+  }
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -29,77 +58,87 @@
         fill: var(--color-light-gray);
       }
     }
-
-    a {
-      position: relative;
-      display: flex;
-      gap: 0.1rem;
-      text-decoration: none;
-      align-items: center;
-      color: var(--color-medium-gray);
-      height: 100%; // stretch to fill nav height
-      cursor: pointer;
-
-      &.active {
-        color: var(--color-primary);
-      }
-    }
-
-    .services {
-      position: relative;
-      overflow: visible;
-      height: 100%;
-
-      .dropdown {
-        position: absolute;
+    .nav-item {
+      a {
+        position: relative;
         display: flex;
-        flex-direction: column;
         gap: 0.1rem;
-        transform: translateY(-2.5rem);
+        text-decoration: none;
+        align-items: center;
+        color: var(--color-medium-gray);
+        height: 100%; // stretch to fill nav height
+        cursor: pointer;
 
-        opacity: 0;
-        visibility: hidden;
-        transition:
-          opacity 0.2s,
-          visibility 0.2s;
-
-        width: 13.5rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        font-size: 1.2rem;
-        color: var(--color-dark-gray);
-        background-color: white;
-        border-radius: 1rem;
-        padding: 0.8rem 0.5rem;
-        list-style: none;
-        z-index: 100;
-
-        .service {
-          border-radius: 0.5rem;
-          padding: 0.5rem 0.3rem;
-
-          &:hover {
-            color: var(--color-primary);
-            background-color: var(--color-light-primary);
-            cursor: pointer;
-          }
+        &.active {
+          color: var(--color-primary);
         }
       }
 
-      &:hover .dropdown {
-        opacity: 1;
-        visibility: visible;
-      }
+      &.has-dropdown {
+        position: relative;
+        overflow: visible;
+        height: 100%;
 
-      .chevron-icon {
-        align-self: center;
-        width: fit-content;
-        height: fit-content;
-        transition: transform 0.2s;
-      }
+        .dropdown {
+          position: absolute;
+          top: 60%;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.1rem;
 
-      &:hover {
+          opacity: 0;
+          visibility: hidden;
+          transition:
+            opacity 0.2s,
+            visibility 0.2s;
+
+          width: 13.5rem;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+          font-size: 1.2rem;
+          color: var(--color-dark-gray);
+          background-color: white;
+          border-radius: 1rem;
+          padding: 0.8rem 0.5rem;
+          list-style: none;
+          z-index: 100;
+          // pointer-events: none;
+
+          &-item {
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.3rem;
+
+            &:hover {
+              color: var(--color-primary);
+              background-color: var(--color-light-primary);
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+          }
+
+          .chevron-icon img {
+            transform: rotate(180deg);
+          }
+        }
+
         .chevron-icon {
-          transform: rotate(180deg);
+          align-self: center;
+          width: fit-content;
+          height: fit-content;
+          // transition: transform 0.2s;
+
+          padding-top: 8%;
+
+          img {
+            transition: transform 0.2s;
+          }
         }
       }
     }
@@ -212,9 +251,7 @@
 
           max-height: 0;
           overflow: hidden;
-          transition:
-            max-height 0.7s ease-in-out,
-            margin 0.7s ease-in-out;
+          transition: all 1s ease-in-out;
 
           &.open {
             max-height: 40rem;

@@ -1,9 +1,18 @@
 .hero {
+  display: flex;
+  flex-direction: column;
   height: 20rem;
   background-color: var(--color-dark-gray);
   border-radius: 2.5rem;
 
+  padding-top: var(--navbar-height);
+
   .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: white;
     font-size: 4rem;
     font-weight: 500;
@@ -35,6 +44,13 @@
       background-position: center;
       background-repeat: no-repeat;
       margin-bottom: 1rem;
+
+      cursor: pointer;
+      transition: transform 0.5s;
+
+      &:hover {
+        transform: scale(1.025);
+      }
 
       .service-title {
         position: absolute;

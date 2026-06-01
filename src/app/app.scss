@@ -2,6 +2,10 @@
   width: 100%;
   box-sizing: border-box;
   padding: var(--page-top-padding) var(--page-side-padding);
+
+  position: relative;
+
+  // <app-navbar> styles => component stylesheet
 }
 
 @media (max-width: 1240px) {

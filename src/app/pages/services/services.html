@@ -1,8 +1,4 @@
 <section class="hero">
-  <div class="navbar-container">
-    <app-navbar></app-navbar>
-  </div>
-
   <div class="content">
     <p>{{content().title}}</p>
   </div>
@@ -10,14 +6,12 @@
 
 <section class="services">
   @for (service of content().servicesDetails; track $index) {
-  <div class="service-card">
+  <div class="service-card" [routerLink]="['/services/' + service.id]">
     <div
       class="service-image"
       [style.background-image]="'url(' + service.imageCurvedPath +')'"
     >
-      <p class="service-title" [routerLink]="['/services/' + service.id]">
-        {{service.title}}
-      </p>
+      <p class="service-title">{{service.title}}</p>
     </div>
 
     <div class="service-description">{{service.description}}</div>

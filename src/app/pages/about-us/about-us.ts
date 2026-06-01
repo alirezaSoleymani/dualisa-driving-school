@@ -1,5 +1,4 @@
 import { ContentService } from '../../shared/services/content/content-service';
-import { Navbar } from './../../shared/components/navbar/navbar';
 import {
   Component,
   inject,
@@ -14,7 +13,7 @@ import 'swiper/css/navigation';
 
 @Component({
   selector: 'app-about-us',
-  imports: [Navbar],
+  imports: [],
   templateUrl: './about-us.html',
   styleUrl: './about-us.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

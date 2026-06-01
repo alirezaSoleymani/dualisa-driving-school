@@ -5,10 +5,11 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ContentService } from './shared/services/content/content-service';
 import { filter } from 'rxjs';
 import { config } from '../config';
+import { Navbar } from './shared/components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer],
+  imports: [RouterOutlet, Navbar, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
