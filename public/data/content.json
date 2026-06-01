@@ -35,6 +35,86 @@
       "description": "Supportive instructors, clear communication, and modern cars ensure a stress-free path to your driving license"
     },
 
+    "tab": {
+      "newLicense": {
+        "id": "new",
+        "headline": "Start Learning Driving From Scratch",
+        "subheadline": "Your step-by-step guide to earning your first Swiss driver's license",
+        "btnText":"New License",
+
+        "steps": [
+          {
+            "title": "Eye Test",
+            "description": "Get your vision checked by an authorized Swiss optician. They will stamp your learner's permit application (valid for 24 months).",
+            "iconPath": "/images/icons/eye-test-icon.svg"
+          },
+          {
+            "title": "First Aid Course",
+            "description": "Attend a mandatory 10-hour course to learn basic life-saving skills and how to secure an accident scene (valid for 6 years).",
+            "iconPath": "/images/icons/first-aid-icon.svg"
+          },
+          {
+            "title": "Apply for Learner's Permit",
+            "description": "Submit your application to your canton's Road Traffic Office along with your eye test, first-aid certificate, and a passport photo.",
+            "iconPath": "/images/icons/apply-permit-icon.svg"
+          },
+          {
+            "title": "Pass the Theory Test",
+            "description": "Study the Swiss traffic rules and take the multiple-choice theory test (available in several languages).",
+            "iconPath": "/images/icons/pass-theory-test-icon.svg"
+          },
+          {
+            "title": "Get Learner's Permit",
+            "description": "After passing the theory exam, you get your learner's permit. With it, you can begin driving practice under supervision.",
+            "iconPath": "/images/icons/learner-permit-icon.svg"
+          },
+          {
+            "title": "Driving Lessons & Mandatory VKU Course",
+            "description": "Start practical driving lessons with an instructor (recommended, not legally required). You must also attend the VKU hazard awareness course before the practical exam.",
+            "iconPath": "/images/icons/driving-lessons-icon.svg"
+          },
+          {
+            "title": "Practical Driving Exam",
+            "description": "Take the road test with an official examiner. If you pass, you move on to the probation period.",
+            "iconPath": "/images/icons/driving-exam-icon.svg"
+          },
+          {
+            "title": "Probationary License (3 Years)",
+            "description": "You receive a provisional license valid for 3 years. During this period, you must complete an additional WAB training day. After 3 years (assuming no major traffic violations), you get the full Swiss driving license.",
+            "iconPath": "images/icons/get-license-icon.svg"
+          }
+        ]
+      },
+      "foreignLicense": {
+        "id": "foreign",
+        "headline": "Convert Your Foreign License",
+        "subheadline": "A simple, 4-step guide to exchanging your existing driver's license for a valid Swiss one",
+        "btnText":"Foreign License",
+
+        "steps": [
+          {
+            "title": "Register your foreign license",
+            "description": "Apply at your cantonal road traffic office within 12 months of arriving in Switzerland.",
+            "iconPath": "/images/icons/foreign-license-icon.svg"
+          },
+          {
+            "title": "Submit required documents",
+            "description": "Provide your original license, a translation (if not in a recognized language), your ID/residence permit, and an eye test.",
+            "iconPath": "/images/icons/submit-docs-icon.svg"
+          },
+          {
+            "title": "Take a control drive (if required)",
+            "description": "Some countries require a practical test (“Kontrollfahrt”), while others (like EU/EFTA countries) usually do not.",
+            "iconPath": "/images/icons/driving-exam-icon.svg"
+          },
+          {
+            "title": "Receive Swiss license",
+            "description": "Your foreign license is exchanged for a Swiss one (and is usually kept by the authorities).",
+            "iconPath": "/images/icons/get-license-icon.svg"
+          }
+        ]
+      }
+    },
     "about": {
       "text": {
         "headlineParts": [

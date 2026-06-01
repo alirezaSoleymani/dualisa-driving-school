@@ -2,10 +2,11 @@ import { ModalService } from './../../shared/services/modal/modal-service';
 import { Component, inject, signal } from '@angular/core';
 import { ContentService } from '../../shared/services/content/content-service';
 import { ContactForm } from '../../shared/components/contact-form/contact-form';
+import { Tab } from '../../shared/components/tab/tab';
 
 @Component({
   selector: 'app-home',
-  imports: [ContactForm],
+  imports: [ContactForm, Tab],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

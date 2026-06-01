@@ -1,1 +1,54 @@
-<p>tab works!</p>
+<div class="tab-container">
+  <div class="tab-buttons">
+    <button
+      [class.active]="activeTab() === 'new'"
+      (click)="activeTab.set('new')"
+    >
+      {{content?.newLicense?.btnText}}
+    </button>
+    <button
+      [class.active]="activeTab() === 'foreign'"
+      (click)="activeTab.set('foreign')"
+    >
+      {{content?.foreignLicense?.btnText}}
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <div class="headline">
+      {{ activeTab() === 'new' ? content?.newLicense?.headline :
+      content?.foreignLicense?.headline }}
+    </div>
+
+    <div class="subheadline">
+      {{ activeTab() === 'new' ? content?.newLicense?.subheadline :
+      content?.foreignLicense?.subheadline }}
+    </div>
+
+    @if (activeTab() === 'new') {
+    <div class="new-license">
+      @for (step of content?.newLicense?.steps; track $index) {
+      <div class="step-card">
+        <img class="step-icon" [src]="step.iconPath" [alt]="step.title" />
+
+        <div class="step-title">{{ step.title }}</div>
+
+        <div class="step-number">{{ formatStepNumber($index) }}</div>
+      </div>
+      }
+    </div>
+    } @if (activeTab() === 'foreign') {
+    <div class="foreign-license">
+      @for (step of content?.foreignLicense?.steps; track $index) {
+      <div class="step-card">
+        <img class="step-icon" [src]="step.iconPath" [alt]="step.title" />
+
+        <div class="step-title">{{ step.title }}</div>
+
+        <div class="step-number">{{ formatStepNumber($index) }}</div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</div>
