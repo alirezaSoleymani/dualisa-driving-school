@@ -15,14 +15,21 @@
   </div>
 
   <div class="tab-content">
-    <div class="headline">
-      {{ activeTab() === 'new' ? content?.newLicense?.headline :
-      content?.foreignLicense?.headline }}
-    </div>
+    <div class="text">
+      <div class="headline">
+        @for ( part of (activeTab() === 'new' ?
+        content?.newLicense?.headlineParts :
+        content?.foreignLicense?.headlineParts); track $index ) {
+        <span [class.highlight]="part.class === 'highlight'"
+          >{{ part.text }}</span
+        >
+        }
+      </div>
 
-    <div class="subheadline">
-      {{ activeTab() === 'new' ? content?.newLicense?.subheadline :
-      content?.foreignLicense?.subheadline }}
+      <div class="subheadline">
+        {{ activeTab() === 'new' ? content?.newLicense?.subheadline :
+        content?.foreignLicense?.subheadline }}
+      </div>
     </div>
 
     @if (activeTab() === 'new') {

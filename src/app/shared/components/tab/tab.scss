@@ -8,55 +8,55 @@
   width: 100%;
 
   .tab-buttons {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    padding: 0.55rem;
-    border-radius: 999px;
-    background: linear-gradient(
-      180deg,
-      #ffffff 0%,
-      var(--color-light-primary) 100%
-    );
-    border: 1px solid rgba(220, 94, 21, 0.12);
-    box-shadow: 0 20px 45px rgba(181, 67, 0, 0.08);
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-off-white);
+    padding-bottom: 0.5rem;
 
     button {
       appearance: none;
       border: none;
       background: transparent;
-      color: var(--color-gray);
+      color: var(--color-medium-gray);
       font: inherit;
-      font-size: 1.05rem;
-      font-weight: 600;
-      line-height: 1;
-      padding: 1rem 1.6rem;
-      border-radius: 999px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.8rem 0.2rem;
       cursor: pointer;
       transition: all 0.2s ease;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--color-primary);
+        transition: width 0.2s ease;
+      }
 
       &:hover {
         color: var(--color-primary);
-        background-color: rgba(220, 94, 21, 0.08);
+        &::after {
+          width: 100%;
+        }
       }
 
       &:active {
-        transform: scale(0.985);
+        transform: scale(0.98);
       }
 
       &.active {
-        background: linear-gradient(
-          135deg,
-          #f57e28 0%,
-          var(--color-primary) 100%
-        );
-        color: white;
-        box-shadow: 0 12px 25px rgba(220, 94, 21, 0.22);
+        color: var(--color-primary);
+        font-weight: 600;
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
-
   .tab-content {
     display: flex;
     flex-direction: column;
@@ -64,24 +64,36 @@
     gap: 1.5rem;
 
     width: auto;
-    height: 35rem;
+    height: 36.5rem;
+
     background-color: white;
     border-radius: 2rem;
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
     padding: 5rem 5rem;
 
-    .headline {
-      color: var(--color-dark-gray);
-      font-size: 2.25rem;
-      font-weight: 600;
-      line-height: 1.2;
-    }
+    .text {
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
-    .subheadline {
-      color: var(--color-medium-gray);
-      font-size: 1.1rem;
-      line-height: 1.4;
-      margin-bottom: 1.5rem;
+      .headline {
+        color: var(--color-dark-gray);
+        font-size: 2.25rem;
+        font-weight: 600;
+        line-height: 1.2;
+
+        .highlight {
+          color: var(--color-primary);
+        }
+      }
+
+      .subheadline {
+        color: var(--color-medium-gray);
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+      }
     }
 
     .new-license,

@@ -38,7 +38,10 @@
     "tab": {
       "newLicense": {
         "id": "new",
-        "headline": "Start Learning Driving From Scratch",
+        "headlineParts": [
+          { "text": "Start Learning Driving From ", "class": "" },
+          { "text": "Scratch", "class": "highlight" }
+        ],
         "subheadline": "Your step-by-step guide to earning your first Swiss driver's license",
         "btnText":"New License",
 
@@ -87,7 +90,11 @@
       },
       "foreignLicense": {
         "id": "foreign",
-        "headline": "Convert Your Foreign License",
+        "headlineParts": [
+          { "text": "Convert Your ", "class": "" },
+          { "text": "Foreign", "class": "highlight" },
+          { "text": " License", "class": "" }
+        ],
         "subheadline": "A simple, 4-step guide to exchanging your existing driver's license for a valid Swiss one",
         "btnText":"Foreign License",
 
