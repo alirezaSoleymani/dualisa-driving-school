@@ -107,9 +107,11 @@
         position: relative;
         box-sizing: border-box;
         padding: 0.75rem;
+        padding-bottom: 3.2rem;
         border-radius: 0.75rem;
         background-color: rgba(240, 240, 240, 1);
 
+        overflow: hidden;
         width: 10.5rem;
         height: 12rem;
 
@@ -118,28 +120,69 @@
         align-items: flex-start;
         // justify-content: space-between;
         gap: 1rem;
-      }
 
-      .step-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        object-fit: contain;
-        background: white;
-        border-radius: 0.5rem;
-      }
+        .step-icon {
+          width: 2.5rem;
+          height: 2.5rem;
+          object-fit: contain;
+          background: white;
+          border-radius: 0.5rem;
+          // transition: all 0.2s;
+          // opacity: 1;
+          // visibility: visible;
+        }
 
-      .step-title {
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
+        .step-title {
+          position: relative;
+          z-index: 1;
+          font-size: 1.25rem;
+          font-weight: 600;
+          transition: all 0.2s;
+        }
 
-      .step-number {
-        position: absolute;
-        right: 0.75rem;
-        bottom: 0.75rem;
-        font-size: 2.5rem;
-        font-weight: 500;
-        line-height: 1;
+        .step-number {
+          position: absolute;
+          right: 0.75rem;
+          bottom: 0.75rem;
+          font-size: 2.5rem;
+          font-weight: 500;
+          line-height: 1;
+        }
+
+        .step-description {
+          display: none;
+          // opacity: 0;
+          // visibility: hidden;
+          overflow: hidden;
+          // text-overflow: clip;
+
+          font-size: 0.75rem;
+          font-weight: 400;
+          line-height: 1.45;
+          color: var(--color-medium-gray);
+
+          // transition: all 0.2s;
+        }
+
+        &:hover {
+          gap: 0.5rem;
+
+          .step-icon {
+            display: none;
+            // opacity: 0;
+            // visibility: hidden;
+          }
+
+          // .step-title {
+          //   font-size: 1.1rem;
+          // }
+
+          .step-description {
+            display: block;
+            // opacity: 1;
+            // visibility: visible;
+          }
+        }
       }
     }
 
