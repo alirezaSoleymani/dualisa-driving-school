@@ -1,3 +1,11 @@
+<section class="slider">
+  <app-content-slider
+    [slides]="servicesContent().servicesDetails"
+    [btnText]="servicesContent().seeDetails"
+    [cardLabel]="servicesContent().price"
+  ></app-content-slider>
+</section>
+
 <section class="intro">
   <div class="heading">{{content().intro.heading}}</div>
 

@@ -6,6 +6,7 @@ export interface Service {
   detailedContent: string;
   defaultPrice: string;
   discountedPrice: string;
+  priceHint: string;
   pricingDetailsDescription: string;
   imagePath: string;
 }

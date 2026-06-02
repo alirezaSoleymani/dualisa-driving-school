@@ -1,1 +1,55 @@
-<p>content-slider works!</p>
+<div class="slider-container">
+  <swiper-container
+    #swiperEl
+    slides-per-view="1"
+    space-between="0"
+    loop="true"
+    autoplay-delay="3000"
+    autoplay-disable-on-interaction="true"
+    navigation-next-el=".next-btn"
+    navigation-prev-el=".prev-btn"
+  >
+    @for (slide of slides(); track slide.id) {
+    <swiper-slide>
+      <div
+        class="slide-bg"
+        [style.backgroundImage]="'linear-gradient(360deg, #252525 0.96%, rgba(51, 51, 51, 0.32) 100%), url(' + slide.imagePath + ')'"
+      >
+        <div class="slide-content">
+          <div class="info-text">
+            <div class="headline">{{ slide.title }}</div>
+            <div class="subheadline">{{ slide.description }}</div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-label">{{ cardLabel() }}</div>
+              <div class="discounted-price">{{ slide.discountedPrice }}</div>
+              <div class="default-price">{{ slide.defaultPrice }}</div>
+
+              <div class="price-hint">{{slide.priceHint}}</div>
+            </div>
+
+            <button
+              class="send-request-btn"
+              [routerLink]="['/services', slide.id]"
+            >
+              <span class="text">{{btnText()}}</span>
+              <span class="arrows">>>></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+    }
+  </swiper-container>
+
+  <div class="slider-nav">
+    <div class="prev-btn">
+      <img src="/images/icons/arrow-left.svg" alt="Previous slide" />
+    </div>
+    <div class="next-btn">
+      <img src="/images/icons/arrow-right.svg" alt="Next slide" />
+    </div>
+  </div>
+</div>

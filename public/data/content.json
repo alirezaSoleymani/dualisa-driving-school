@@ -43,7 +43,7 @@
           { "text": "Scratch", "class": "highlight" }
         ],
         "subheadline": "Your step-by-step guide to earning your first Swiss driver's license",
-        "btnText":"New License",
+        "btnText": "New License",
 
         "steps": [
           {
@@ -96,7 +96,7 @@
           { "text": " License", "class": "" }
         ],
         "subheadline": "A simple, 4-step guide to exchanging your existing driver's license for a valid Swiss one",
-        "btnText":"Foreign License",
+        "btnText": "Foreign License",
 
         "steps": [
           {
@@ -253,6 +253,7 @@
     "sendARequest": "Send A Request",
     "price": "Price",
     "pricingDetails": "Pricing Details",
+    "seeDetails": "See Details",
 
     "servicesDetails": [
       {
@@ -263,6 +264,7 @@
         "detailedContent": "Whether you are a complete beginner or already have some experience, our instructors adapt each lesson to your pace and learning style.\nYou will learn parking, maneuvering, city driving, highway driving, hazard awareness, and exam-relevant techniques.\nWe prioritize calm instruction, modern teaching methods, and clear feedback so that your progress feels consistent and stress-free.\nAutomatic and manual cars are available.",
         "defaultPrice": "100.00 CHF",
         "discountedPrice": "100.60 CHF",
+        "priceHint": "Book 10 lessons, get the 11th free",
         "pricingDetailsDescription": "Lessons are billed per session. A package of 10 lessons includes the 11th lesson for free. Payment can be made per lesson or in advance for the discounted package.",
         "imagePath": "/images/Category-B-Image.png",
         "imageCurvedPath": "/images/Category-B-Image-Curved.svg",
@@ -281,6 +283,7 @@
         "detailedContent": "Our First Aid Course teaches you the essential skills needed to act confidently and responsibly in emergencies. The course follows official Swiss guidelines and covers accident response, life-saving techniques, resuscitation (CPR), wound care, and how to secure the accident site.\nAt the end of the course, you will receive the official Nothelfer certificate, required for your learner's permit application. Our classes are clear, practical, and suitable for complete beginners.",
         "defaultPrice": "119.00 CHF",
         "discountedPrice": "",
+        "priceHint": "Certificate included, valid for 6 years",
         "pricingDetailsDescription": "Price includes all course materials and the official certificate required for your learner’s permit in Switzerland. Payment is due at the time of registration.",
         "imagePath": "/images/First-Aid-Image.png",
         "imageCurvedPath": "/images/First-Aid-Image-Curved.svg",
@@ -299,6 +302,7 @@
         "detailedContent": "This course guides you through all essential topics of the Swiss theory exam. We explain traffic rules, signs, priorities, dangers, and safe driving behavior in a simple, structured way.\nYou'll practice with official question formats, learn strategies to avoid common mistakes, and understand the logic behind each rule. The goal is not only to pass the exam but to build a strong foundation for your practical driving lessons.",
         "defaultPrice": "80.00 CHF",
         "discountedPrice": "",
+        "priceHint": "Pay per session, book only what you need",
         "pricingDetailsDescription": "The price is per lesson and can be paid individually. Students may book as many sessions as needed to prepare for the Swiss theory exam.",
         "imagePath": "/images/Theory-Test-Image.png",
         "imageCurvedPath": "/images/Theory-Test-Image-Curved.svg",
@@ -317,6 +321,7 @@
         "detailedContent": "In this course, you learn how to assess traffic situations, identify risks early, and adapt your driving to weather, traffic, and road conditions.\nThe VKU is required by Swiss law before you can register for the practical driving test.\nOur course is taught with real examples, videos, and interactive exercises so you can understand how to drive defensively and safely in everyday situations.",
         "defaultPrice": "168.00 CHF",
         "discountedPrice": "",
+        "priceHint": "Fixed price for the full 4-module course",
         "pricingDetailsDescription": "This is a fixed price for the complete VKU course. Payment confirms your seat and must be completed before the first session.",
         "imagePath": "/images/Traffic-Study-Image.png",
         "imageCurvedPath": "/images/Traffic-Study-Image-Curved.svg",
@@ -335,6 +340,7 @@
         "detailedContent": "After receiving your probationary license, Swiss law requires you to attend the WAB completion course within three years.\nIn this training, you improve your advanced driving skills through controlled exercises on special training grounds.\nYou learn braking techniques, lane control, eco-driving, hazard management, and how to better understand your vehicle's limits.\nUpon completion, you receive the certificate needed to convert your probationary license into a full Swiss license.",
         "defaultPrice": "200.00 CHF",
         "discountedPrice": "",
+        "priceHint": "Mandatory course day included in one fixed price",
         "pricingDetailsDescription": "The price covers the full mandatory course day required during the probationary period. Payment is needed to secure your spot at the training center.",
         "imagePath": "/images/Completion-Course-Image.png",
         "imageCurvedPath": "/images/Completion-Course-Image-Curved.svg",
@@ -353,6 +359,7 @@
         "detailedContent": "This program is designed for learners who need extra guidance, reassurance, or a slower learning pace.\nFor seniors, we focus on refreshing traffic knowledge, adapting to modern traffic density, and building safe driving habits.\nFor anxious learners, we use calm, step-by-step methods to help reduce stress and increase confidence behind the wheel.\nThe goal is to create a comfortable and supportive learning environment where everyone can succeed.",
         "defaultPrice": "100.00 CHF",
         "discountedPrice": "",
+        "priceHint": "Flexible per-lesson pricing, tailored to your pace",
         "pricingDetailsDescription": "This rate applies per lesson and includes personalized instruction tailored to the driver’s needs. Payment is made after each session unless otherwise arranged.",
         "imagePath": "/images/Special-Program-Image.png",
         "imageCurvedPath": "/images/Special-Program-Image-Curved.svg",
