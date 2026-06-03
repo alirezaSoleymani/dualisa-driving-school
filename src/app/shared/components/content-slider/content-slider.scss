@@ -4,6 +4,7 @@
   height: 40rem;
   border-radius: 2.5rem;
   overflow: hidden;
+  background: transparent;
 
   swiper-container {
     display: block;
@@ -128,6 +129,11 @@
         }
       }
     }
+  }
+
+  .swiper-slide-active .slide-bg {
+    transform: scale(1.02);
+    transition: transform 3.8s linear;
   }
 
   .slider-nav {
